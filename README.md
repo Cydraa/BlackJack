@@ -10,3 +10,9 @@ TODO:
 
 
 En Archivos Base esta un codigo del 21 (o blackjack) en PseINT y en C++ que hice el semestre pasado.
+
+Para mas homogeneidad nombrar:
+
+Variables asi: holaComoEstas
+
+Funciones y archivos asi: HolaComoEstas
