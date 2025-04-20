@@ -7,3 +7,6 @@ TODO:
 - Crear escenario del juego
 - Crear escenario de creditos
 - Crear escenario de reglas
+
+
+En Archivos Base esta un codigo del 21 (o blackjack) en PseINT y en C++ que hice el semestre pasado.
