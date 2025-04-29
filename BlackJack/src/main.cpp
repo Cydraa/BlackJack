@@ -15,37 +15,43 @@ by Jeffery Myers is marked with CC0 1.0. To view a copy of this license, visit h
 
 int main()
 {
-	Vector2 posicion = { 900,400 };
+	Vector2 posicion = { 0,0 };
+	Vector2 posicion1 = { 800,500 };
+	float direccionX(1),direccionY(1);
+
 	// Tell the window to use vsync and work on high DPI displays
 	SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
 
 	// Create the window and OpenGL context
 	InitWindow(VENTANA_ANCHO, VENTANA_ALTO, "BLACKJACK");
 
-	Texture t_12 = LoadTexture("resources/cartas/12t.png"); 
-
-	float rotacionCarta(0);
+	Texture t_12 = LoadTexture("resources/cartas/11d.png"); 
 
 	// game loop
 	while (!WindowShouldClose())		// run the loop untill the user presses ESCAPE or presses the Close button on the window
 	{
-		if (rotacionCarta == 360) rotacionCarta = 0;
 
+		if (posicion.x == VENTANA_ANCHO-(330/2)) direccionX = -1;
+		if (posicion.x == 0) direccionX = 1;
+		if (posicion.y == VENTANA_ALTO - (495 / 2)) direccionY = -1;
+		if (posicion.y == 0) direccionY = 1;
+
+		posicion.x += direccionX;
+		posicion.y += direccionY;
 
 		// DRAWING
 		BeginDrawing();
 
 		//Menu principal
 		ClearBackground(DARKGREEN);
+
+		DrawTextureEx(t_12, posicion, 0, 0.5, Color{200,255,20,100});
+
 		DrawText("BLACKJACK", (VENTANA_ANCHO - (MeasureText("BLACKJACK", 70))) / 2, 100, 70, RAYWHITE);
 		DrawText("JUGAR", (VENTANA_ANCHO - (MeasureText("JUGAR", 50))) / 2, 240, 50, RAYWHITE);
 		DrawText("INSTRUCCIONES", (VENTANA_ANCHO - (MeasureText("INSTRUCCIONES", 50))) / 2, 320, 50, RAYWHITE);
 		DrawText("CREDITOS", (VENTANA_ANCHO - (MeasureText("CREDITOS", 50))) / 2, 400, 50, RAYWHITE);
 		DrawText("SALIR", (VENTANA_ANCHO - (MeasureText("SALIR", 50))) / 2, 480, 50, RAYWHITE);
-		DrawTextureEx(t_12, posicion, rotacionCarta, 0.5, WHITE);
-
-
-		rotacionCarta++;
 
 		// end the frame and get ready for the next one  (display frame, poll input, etc...)
 		EndDrawing();
