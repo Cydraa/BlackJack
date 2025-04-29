@@ -15,28 +15,41 @@ by Jeffery Myers is marked with CC0 1.0. To view a copy of this license, visit h
 
 int main()
 {
+	Vector2 posicion = { 900,400 };
 	// Tell the window to use vsync and work on high DPI displays
 	SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
 
 	// Create the window and OpenGL context
 	InitWindow(VENTANA_ANCHO, VENTANA_ALTO, "BLACKJACK");
 
+	Texture t_12 = LoadTexture("resources/cartas/12t.png"); 
+
+	float rotacionCarta(0);
+
 	// game loop
 	while (!WindowShouldClose())		// run the loop untill the user presses ESCAPE or presses the Close button on the window
 	{
+		if (rotacionCarta == 360) rotacionCarta = 0;
+
 
 		// DRAWING
 		BeginDrawing();
 
 		//Menu principal
+		ClearBackground(DARKGREEN);
 		DrawText("BLACKJACK", (VENTANA_ANCHO - (MeasureText("BLACKJACK", 70))) / 2, 100, 70, RAYWHITE);
 		DrawText("JUGAR", (VENTANA_ANCHO - (MeasureText("JUGAR", 50))) / 2, 240, 50, RAYWHITE);
 		DrawText("INSTRUCCIONES", (VENTANA_ANCHO - (MeasureText("INSTRUCCIONES", 50))) / 2, 320, 50, RAYWHITE);
 		DrawText("CREDITOS", (VENTANA_ANCHO - (MeasureText("CREDITOS", 50))) / 2, 400, 50, RAYWHITE);
 		DrawText("SALIR", (VENTANA_ANCHO - (MeasureText("SALIR", 50))) / 2, 480, 50, RAYWHITE);
+		DrawTextureEx(t_12, posicion, rotacionCarta, 0.5, WHITE);
+
+
+		rotacionCarta++;
 
 		// end the frame and get ready for the next one  (display frame, poll input, etc...)
 		EndDrawing();
+
 	}
 
 	// destroy the window and cleanup the OpenGL context
