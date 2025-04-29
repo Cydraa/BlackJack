@@ -7,46 +7,37 @@ by Jeffery Myers is marked with CC0 1.0. To view a copy of this license, visit h
 
 */
 
+
 #include "raylib.h"
 
-#include "resource_dir.h"	// utility header for SearchAndSetResourceDir
+#define VENTANA_ANCHO 1200
+#define VENTANA_ALTO 800
 
-int main ()
+int main()
 {
 	// Tell the window to use vsync and work on high DPI displays
 	SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
 
 	// Create the window and OpenGL context
-	InitWindow(1280, 800, "Hello Raylib");
+	InitWindow(VENTANA_ANCHO, VENTANA_ALTO, "BLACKJACK");
 
-	// Utility function from resource_dir.h to find the resources folder and set it as the current working directory so we can load from it
-	SearchAndSetResourceDir("resources");
-
-	// Load a texture from the resources directory
-	Texture wabbit = LoadTexture("wabbit_alpha.png");
-	
 	// game loop
 	while (!WindowShouldClose())		// run the loop untill the user presses ESCAPE or presses the Close button on the window
 	{
-		// drawing
+
+		// DRAWING
 		BeginDrawing();
 
-		// Setup the back buffer for drawing (clear color and depth buffers)
-		ClearBackground(BLACK);
+		//Menu principal
+		DrawText("BLACKJACK", (VENTANA_ANCHO - (MeasureText("BLACKJACK", 70))) / 2, 100, 70, RAYWHITE);
+		DrawText("JUGAR", (VENTANA_ANCHO - (MeasureText("JUGAR", 50))) / 2, 240, 50, RAYWHITE);
+		DrawText("INSTRUCCIONES", (VENTANA_ANCHO - (MeasureText("INSTRUCCIONES", 50))) / 2, 320, 50, RAYWHITE);
+		DrawText("CREDITOS", (VENTANA_ANCHO - (MeasureText("CREDITOS", 50))) / 2, 400, 50, RAYWHITE);
+		DrawText("SALIR", (VENTANA_ANCHO - (MeasureText("SALIR", 50))) / 2, 480, 50, RAYWHITE);
 
-		// draw some text using the default font
-		DrawText("Hello Raylib", 200,200,20,WHITE);
-
-		// draw our texture to the screen
-		DrawTexture(wabbit, 400, 200, WHITE);
-		
 		// end the frame and get ready for the next one  (display frame, poll input, etc...)
 		EndDrawing();
 	}
-
-	// cleanup
-	// unload our texture so it can be cleaned up
-	UnloadTexture(wabbit);
 
 	// destroy the window and cleanup the OpenGL context
 	CloseWindow();
