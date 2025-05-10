@@ -1,7 +1,6 @@
 #include "Titulo.hpp"
+#include "Reglas.hpp"
 #include "Interfaz.hpp"
-
-typedef enum Pantalla { TITULO, JUEGO, REGLAS, CREDITOS, SALIR } Pantalla;
 
 int main()
 {
@@ -15,19 +14,23 @@ int main()
 	// Loop del juego
 	while (!WindowShouldClose())
 	{
+		//Logica
 		switch (pantallaActual)
 		{
 			case TITULO:
 			{
-				IniciarTitulo(seleccion);
+				IniciarTitulo(seleccion, pantallaActual);
 				break;
 			}
-
+			case REGLAS:
+			{
+				IniciarReglas(seleccion, pantallaActual);
+			}
 		}
-
 		// Inicia el dibujo
 		BeginDrawing();
 
+		//Renders
 		switch (pantallaActual)
 		{
 		case TITULO:
@@ -35,6 +38,17 @@ int main()
 			RenderTitulo(seleccion);
 			break;
 		}
+		case JUEGO:
+			RenderJuego();
+			break;
+
+		case REGLAS:
+			RenderReglas();
+			break;
+
+		case CREDITOS:
+			RenderCreditos();
+			break;
 
 		}
 

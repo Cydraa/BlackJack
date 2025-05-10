@@ -1,6 +1,5 @@
 #pragma once
-#include "raylib.h"
 
-#define MENU_MAX 4
+#include "Core.hpp"
 
-void IniciarTitulo(short &opciones);
+void IniciarTitulo(short &seleccion, Pantalla &pantallaActual);

@@ -1,11 +1,13 @@
 #pragma once
 
-#include "raylib.h"
-#include "Titulo.hpp"
+#include "Core.hpp"
 
 #define VENTANA_ANCHO 1200
 #define VENTANA_ALTO 800
 
+/**
+* \brief Contiene la informacion para generar un boton con texto.
+*/
 struct Boton
 {
 	Vector2 pos;
@@ -18,9 +20,18 @@ struct Boton
 
 };
 
+/**
+* \brief Dibuja un boton de la interfaz.
+* \param Boton Estructura de boton.
+*/
 void DibujarBoton(Boton boton);
 
-void RenderTitulo(short opciones);
+/**
+* \brief Maneja toda la interfaz grafica de la pantalla del titulo.
+* \param short seleccion de usuario.
+*/
+void RenderTitulo(short seleccion);
+
 void RenderJuego();
-void RenderInstrucciones();
+void RenderReglas();
 void RenderCreditos();
