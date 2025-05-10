@@ -53,6 +53,11 @@ int main()
 		DrawText("CREDITOS", (VENTANA_ANCHO - (MeasureText("CREDITOS", 50))) / 2, 400, 50, RAYWHITE);
 		DrawText("SALIR", (VENTANA_ANCHO - (MeasureText("SALIR", 50))) / 2, 480, 50, RAYWHITE);
 
+		if (IsKeyDown(KEY_ENTER)) 
+		{
+			ClearBackground(DARKBLUE);
+		}
+
 		// end the frame and get ready for the next one  (display frame, poll input, etc...)
 		EndDrawing();
 
