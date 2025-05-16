@@ -531,11 +531,13 @@
     <ClInclude Include="..\..\include\resource_dir.h" />
     <ClInclude Include="..\..\src\Core.hpp" />
     <ClInclude Include="..\..\src\Interfaz.hpp" />
+    <ClInclude Include="..\..\src\JuegoBJ.hpp" />
     <ClInclude Include="..\..\src\Reglas.hpp" />
     <ClInclude Include="..\..\src\Titulo.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Interfaz.cpp" />
+    <ClCompile Include="..\..\src\JuegoBJ.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\Reglas.cpp" />
     <ClCompile Include="..\..\src\Titulo.cpp" />

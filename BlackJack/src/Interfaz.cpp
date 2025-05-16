@@ -1,6 +1,5 @@
 #include "Interfaz.hpp"
 
-
 Boton::Boton()
 {
 	pos.x = 0;

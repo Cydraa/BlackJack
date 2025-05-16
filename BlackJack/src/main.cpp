@@ -2,6 +2,7 @@
 #include "Reglas.hpp"
 #include "Interfaz.hpp"
 #include "resource_dir.h"
+#include "JuegoBJ.hpp"
 
 int main()
 {

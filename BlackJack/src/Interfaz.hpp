@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.hpp"
+#include "JuegoBJ.hpp"
 
 /**
 * \brief Contiene la informacion para generar un boton con texto.

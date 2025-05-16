@@ -36,27 +36,6 @@ struct gameData
     }
 };
 
-// Palos de cartas. NULO_PALO es para el espacios del arreglo de "mano" que aun no se usan.
-enum Palo { NULO_PALO = 0, CORAZON = 1, DIAMANTE, TREBOL, PICA };
-
-// Define la estructura de una carta.
-class carta {
-public:
-    int palo;         // Figura
-    int denominacion; // Número de la carta
-    Vector2 pos;
-    int textura;
-
-    // Constructor
-    carta(int pal = NULO_PALO, int denom = 0) {
-        palo = pal;
-        denominacion = denom;
-        pos.x = 0;
-        pos.y = 0;
-        textura = 0;
-    }
-};
-
 void PauseGame(gameData &gD);
 void LoadAllTextures(Texture2D textures[]);
 void UnloadAllTextures(Texture2D textures[]);
