@@ -47,9 +47,9 @@ void DibujarNotificacion(Notificacion notif);
 * \brief Maneja toda la interfaz grafica de la pantalla del titulo.
 * \param short seleccion de usuario.
 */
-void RenderTitulo(short seleccion);
+void RenderTitulo(gameData &gD);
 
 void RenderJuego(Texture2D cardTextures[], gameData &gD, carta deck[]);
-void RenderReglas();
-void RenderCreditos();
-void RenderPausa();
+void RenderReglas(gameData &gD);
+void RenderCreditos(gameData &gD);
+void RenderPausa(gameData &gD);

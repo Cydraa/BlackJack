@@ -12,10 +12,6 @@
 using std::string;
 using std::sprintf;
 
-extern bool exitWindow;
-extern bool exitWindowRequested;
-extern int seleccionPausa;
-
 typedef enum Pantalla { TITULO = -1, JUEGO, REGLAS, CREDITOS, SALIR } Pantalla;
 
 struct gameData
@@ -23,12 +19,20 @@ struct gameData
     int sumPlayer;
     int sumCPU;
     bool playerWin;
+    bool exitWindow;
+    bool exitWindowRequested;
+    int seleccionPausa;
+    short seleccion;
 
     gameData()
     {
         sumPlayer = 0;
         sumCPU = 0;
         playerWin = false;
+        exitWindow = false;
+        exitWindowRequested = false;
+        seleccionPausa = 0;
+        seleccion = 0;
     }
 };
 
@@ -53,6 +57,6 @@ public:
     }
 };
 
-void PauseGame();
+void PauseGame(gameData &gD);
 void LoadAllTextures(Texture2D textures[]);
 void UnloadAllTextures(Texture2D textures[]);

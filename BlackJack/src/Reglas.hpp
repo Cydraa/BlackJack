@@ -2,5 +2,5 @@
 
 #include "Core.hpp"
 
-void IniciarReglas(short& seleccion, Pantalla& pantallaActual);
+void IniciarReglas(gameData &gD, Pantalla& pantallaActual);
 

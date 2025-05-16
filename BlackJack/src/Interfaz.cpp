@@ -1,6 +1,5 @@
 #include "Interfaz.hpp"
 
-extern int seleccionPausa;
 
 Boton::Boton()
 {
@@ -38,7 +37,7 @@ void DibujarBoton(Boton boton)
 	DrawText(boton.texto, boton.pos.x + offSetX, boton.pos.y + offSetY, boton.tamTexto, boton.colorTexto);
 }
 
-void RenderTitulo(short seleccion)
+void RenderTitulo(gameData &gD)
 {
 	Boton botonesMenu[MENU_MAX];
 	char* menu[MENU_MAX] = { "Jugar","Reglas","Creditos","Salir" };
@@ -62,7 +61,7 @@ void RenderTitulo(short seleccion)
 		botonesMenu[i].pos.y = 180 + 90 * (i + 1);
 
 
-		if (seleccion == i) botonesMenu[i].colorBoton = RED;
+		if (gD.seleccion == i) botonesMenu[i].colorBoton = RED;
 
 		DibujarBoton(botonesMenu[i]);
 	}
@@ -111,7 +110,7 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD, carta deck[])
 }
 
 //WIP
-void RenderReglas()
+void RenderReglas(gameData &gD)
 {
 	int longitudTexto;
 	const char* titulo = { "Reglas" };
@@ -126,7 +125,7 @@ void RenderReglas()
 }
 
 //WIP
-void RenderCreditos()
+void RenderCreditos(gameData &gD)
 {
 	int longitudTexto;
 	const char* titulo = { "Creditos" };
@@ -138,7 +137,7 @@ void RenderCreditos()
 
 }
 
-void RenderPausa()
+void RenderPausa(gameData &gD)
 {
 	Boton boton;
 	Notificacion pausa;
@@ -155,7 +154,7 @@ void RenderPausa()
 	boton.height = boton.tamTexto + 20;
 	boton.pos.x = VENTANA_ANCHO / 2 - boton.width - 20;
 	boton.pos.y = VENTANA_ALTO / 2 + 10;
-	if (seleccionPausa == 0) boton.colorBoton = RED;
+	if (gD.seleccionPausa == 0) boton.colorBoton = RED;
 	else boton.colorBoton = DARKBROWN;
 
 
@@ -166,7 +165,7 @@ void RenderPausa()
 	boton.height = boton.tamTexto + 20;
 	boton.pos.x = VENTANA_ANCHO / 2 + 20;
 	boton.pos.y = VENTANA_ALTO / 2 + 10;
-	if (seleccionPausa == 1) boton.colorBoton = RED;
+	if (gD.seleccionPausa == 1) boton.colorBoton = RED;
 	else boton.colorBoton = DARKBROWN;
 
 	DibujarBoton(boton);

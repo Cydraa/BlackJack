@@ -2,4 +2,4 @@
 
 #include "Core.hpp"
 
-void IniciarTitulo(short &seleccion, Pantalla &pantallaActual);
+void IniciarTitulo(gameData &gD, Pantalla &pantallaActual);

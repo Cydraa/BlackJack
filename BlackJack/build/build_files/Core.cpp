@@ -1,27 +1,27 @@
 #include "Core.hpp"
 
-void PauseGame()
+void PauseGame(gameData &gD)
 {
 	if (IsKeyPressed(KEY_RIGHT) || IsKeyPressed(KEY_UP))
 	{
-		if (seleccionPausa < 1) ++seleccionPausa;
-		else seleccionPausa = 1;
+		if (gD.seleccionPausa < 1) ++gD.seleccionPausa;
+		else gD.seleccionPausa = 1;
 	}
 
 	if (IsKeyPressed(KEY_LEFT) || IsKeyPressed(KEY_DOWN))
 	{
-		if (seleccionPausa > 0) --seleccionPausa;
-		else seleccionPausa = 0;
+		if (gD.seleccionPausa > 0) --gD.seleccionPausa;
+		else gD.seleccionPausa = 0;
 	}
 
-	switch (seleccionPausa)
+	switch (gD.seleccionPausa)
 	{
-	case 0: if (IsKeyPressed(KEY_ENTER)) exitWindow = true; break;
-	case 1: if (IsKeyPressed(KEY_ENTER)) { exitWindow = false; exitWindowRequested = false; } break;
+	case 0: if (IsKeyPressed(KEY_ENTER)) gD.exitWindow = true; break;
+	case 1: if (IsKeyPressed(KEY_ENTER)) { gD.exitWindow = false; gD.exitWindowRequested = false; } break;
 	}
 
-	if (IsKeyPressed(KEY_S)) exitWindow = true;
-	else if (IsKeyPressed(KEY_N)) exitWindowRequested = false;
+	if (IsKeyPressed(KEY_S)) gD.exitWindow = true;
+	else if (IsKeyPressed(KEY_N)) gD.exitWindowRequested = false;
 }
 
 void LoadAllTextures(Texture2D textures[])

@@ -3,16 +3,10 @@
 #include "Interfaz.hpp"
 #include "resource_dir.h"
 
-bool exitWindow = false;
-bool exitWindowRequested = false;
-int seleccionPausa(0);
-
 int main()
 {
 	Pantalla pantallaActual = TITULO;
-	gameData gData;
-
-	short seleccion(0);
+	gameData gD;
 
 	// Crear el contexto de OpenGL
 	InitWindow(VENTANA_ANCHO, VENTANA_ALTO, "BLACKJACK");
@@ -26,19 +20,19 @@ int main()
 	SetTargetFPS(60);
 
 	// Loop del juego
-	while (!exitWindow)
+	while (!gD.exitWindow)
 	{
-		if (WindowShouldClose() || IsKeyPressed(KEY_ESCAPE)) { seleccionPausa = 0;  exitWindowRequested = true; };
+		if (WindowShouldClose() || IsKeyPressed(KEY_ESCAPE)) { gD.seleccionPausa = 0;  gD.exitWindowRequested = true; };
 
 		//Logica
 
-		if (exitWindowRequested == false)
+		if (gD.exitWindowRequested == false)
 		{
 			switch (pantallaActual)
 			{
 				case TITULO:
 				{
-					IniciarTitulo(seleccion, pantallaActual);
+					IniciarTitulo(gD, pantallaActual);
 					break;
 				}
 				case JUEGO:
@@ -46,14 +40,14 @@ int main()
 
 				case REGLAS:
 				{
-					IniciarReglas(seleccion, pantallaActual);
+					IniciarReglas(gD, pantallaActual);
 					break;
 				}
 			}
 		}
 		else
 		{
-			PauseGame();
+			PauseGame(gD);
 		}
 
 		// Inicia el dibujo
@@ -64,25 +58,25 @@ int main()
 		{
 		case TITULO:
 		{
-			RenderTitulo(seleccion);
+			RenderTitulo(gD);
 			break;
 		}
 		case JUEGO:
-			RenderJuego(cardTextures, gData, hand);
+			RenderJuego(cardTextures, gD, hand);
 			break;
 
 		case REGLAS:
-			RenderReglas();
+			RenderReglas(gD);
 			break;
 
 		case CREDITOS:
-			RenderCreditos();
+			RenderCreditos(gD);
 			break;
 		}
 
-		if (exitWindowRequested)
+		if (gD.exitWindowRequested)
 		{
-			RenderPausa();
+			RenderPausa(gD);
 		}
 
 		// end the frame and get ready for the next one  (display frame, poll input, etc...)
