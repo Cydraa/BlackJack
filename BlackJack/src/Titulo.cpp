@@ -5,8 +5,7 @@ extern int seleccionPausa;
 
 void IniciarTitulo(short &seleccion, Pantalla & pantallaActual)
 {
-	if (exitWindowRequested == false)
-	{
+
 		if (IsKeyPressed(KEY_DOWN))
 		{
 			if (seleccion < 4) ++seleccion;
@@ -26,10 +25,5 @@ void IniciarTitulo(short &seleccion, Pantalla & pantallaActual)
 		case CREDITOS: if (IsKeyPressed(KEY_ENTER)) pantallaActual = CREDITOS; break;
 		case SALIR: if (IsKeyPressed(KEY_ENTER)) exitWindowRequested = true; break;
 		}
-	}
-	else
-	{
-		PauseGame();
-	}
 
 }

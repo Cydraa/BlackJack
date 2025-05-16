@@ -1,5 +1,7 @@
 #include "Interfaz.hpp"
 
+extern int seleccionPausa;
+
 Boton::Boton()
 {
 	pos.x = 0;
@@ -11,6 +13,21 @@ Boton::Boton()
 	width = MeasureText(texto, tamTexto) + 20;
 	height = tamTexto + 20;
 };
+
+Notificacion::Notificacion()
+{
+	titulo = "Titulo";
+	texto = "Texto";
+	tamTitulo = 60;
+	tamTexto = 30;
+	colorTitulo = RAYWHITE;
+	colorTexto = RAYWHITE;
+	colorFondo = Color{ 0, 0, 0, 235 };
+	width = VENTANA_ANCHO;
+	height = 200;
+	pos.x = 0;
+	pos.y = VENTANA_ALTO / 2 - height / 2;
+}
 
 void DibujarBoton(Boton boton)
 {
@@ -52,28 +69,44 @@ void RenderTitulo(short seleccion)
 
 }
 
-void DibujarNotificacion(char* titulo, char* texto)
+void DibujarNotificacion(Notificacion notif)
 {
-	int height = 200;
-	int longitudTexto = MeasureText(titulo, 50);
-	DrawRectangle(0, VENTANA_ALTO / 2 - height/2, VENTANA_ANCHO, height, Color{ 0, 0, 0, 235 });
-	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, (VENTANA_ALTO / 2 - height / 2)+20, 50, RAYWHITE);
-	longitudTexto = MeasureText(texto, 30);
-	DrawText(texto, VENTANA_ANCHO / 2 - longitudTexto / 2, (VENTANA_ALTO / 2 - height / 2) + 70, 30, RAYWHITE);
+	int textoX, textoY;
+	int longitudTexto;
+
+	textoY = (VENTANA_ALTO / 2 - notif.height / 2);
+
+	DrawRectangle(notif.pos.x, notif.pos.y, notif.width, notif.height, notif.colorFondo);
+
+	longitudTexto = MeasureText(notif.titulo, notif.tamTitulo);
+	textoX = VENTANA_ANCHO / 2 - longitudTexto/2;
+	DrawText(notif.titulo, textoX, textoY + 20, notif.tamTitulo, notif.colorTitulo);
+
+	longitudTexto = MeasureText(notif.texto, notif.tamTexto);
+	textoX = VENTANA_ANCHO / 2 - longitudTexto/2;
+	DrawText(notif.texto, textoX, textoY + 70, notif.tamTexto, notif.colorTexto);
 }
 
 //WIP
-void RenderJuego()
+void RenderJuego(Texture2D cardTextures[], gameData &gD, carta deck[])
 {
-
 	int longitudTexto;
-	const char* titulo = { "Juego" };
+	const int posXOriginal = 1000;
+	const int posYOriginal = 175;
 
-	ClearBackground(DARKBLUE);
-
+	const char* titulo = { "BLACKJACK" };
 	longitudTexto = MeasureText(titulo, 80);
-	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, 100, 80, RAYWHITE);
+	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, 40, 80, RAYWHITE);
 
+	ClearBackground(Color{0,87,43,255});
+
+	DrawText("Mesa", 100, 120, 40, RAYWHITE);
+	DrawText("Jugador", 100, 440, 40, RAYWHITE);
+
+	deck[1].pos.x = 1000;
+	deck[1].pos.y = 175;
+
+	DrawTextureEx(cardTextures[deck[1].textura],deck[1].pos,0,0.45,WHITE);
 
 }
 
@@ -103,4 +136,38 @@ void RenderCreditos()
 	longitudTexto = MeasureText(titulo, 80);
 	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, 100, 80, RAYWHITE);
 
+}
+
+void RenderPausa()
+{
+	Boton boton;
+	Notificacion pausa;
+
+	pausa.titulo = "PAUSA";
+	pausa.texto = "Deseas salir del juego?";
+
+	DibujarNotificacion(pausa);
+
+	boton.tamTexto = 50;
+
+	boton.texto = "SI";
+	boton.width = MeasureText(boton.texto, boton.tamTexto) + 20;
+	boton.height = boton.tamTexto + 20;
+	boton.pos.x = VENTANA_ANCHO / 2 - boton.width - 20;
+	boton.pos.y = VENTANA_ALTO / 2 + 10;
+	if (seleccionPausa == 0) boton.colorBoton = RED;
+	else boton.colorBoton = DARKBROWN;
+
+
+	DibujarBoton(boton);
+
+	boton.texto = "NO";
+	boton.width = MeasureText(boton.texto, boton.tamTexto) + 20;
+	boton.height = boton.tamTexto + 20;
+	boton.pos.x = VENTANA_ANCHO / 2 + 20;
+	boton.pos.y = VENTANA_ALTO / 2 + 10;
+	if (seleccionPausa == 1) boton.colorBoton = RED;
+	else boton.colorBoton = DARKBROWN;
+
+	DibujarBoton(boton);
 }
