@@ -8,6 +8,8 @@ Boton::Boton()
 	tamTexto = 20;
 	colorTexto = RAYWHITE;
 	colorBoton = BLACK;
+	width = MeasureText(texto, tamTexto) + 20;
+	height = tamTexto + 20;
 };
 
 void DibujarBoton(Boton boton)
@@ -15,7 +17,7 @@ void DibujarBoton(Boton boton)
 	int offSetX = 10;
 	int offSetY = 10;
 
-	DrawRectangle(boton.pos.x, boton.pos.y, MeasureText(boton.texto, boton.tamTexto) + (offSetX * 2), boton.tamTexto + (offSetY * 2), boton.colorBoton);
+	DrawRectangle(boton.pos.x, boton.pos.y, boton.width, boton.height, boton.colorBoton);
 	DrawText(boton.texto, boton.pos.x + offSetX, boton.pos.y + offSetY, boton.tamTexto, boton.colorTexto);
 }
 
@@ -36,15 +38,28 @@ void RenderTitulo(short seleccion)
 	{
 		botonesMenu[i].tamTexto = 60;
 		longitudTexto = MeasureText(menu[i], botonesMenu[i].tamTexto);
-		botonesMenu[i].pos.x = VENTANA_ANCHO/2 - longitudTexto/2;
-		botonesMenu[i].pos.y = 180 + 90 * (i + 1);
 		botonesMenu[i].texto = menu[i];
+		botonesMenu[i].width = longitudTexto + 20;
+		botonesMenu[i].height = botonesMenu[i].tamTexto + 20;
+		botonesMenu[i].pos.x = VENTANA_ANCHO / 2 - botonesMenu[i].width/2;
+		botonesMenu[i].pos.y = 180 + 90 * (i + 1);
+
 
 		if (seleccion == i) botonesMenu[i].colorBoton = RED;
 
 		DibujarBoton(botonesMenu[i]);
 	}
 
+}
+
+void DibujarNotificacion(char* titulo, char* texto)
+{
+	int height = 200;
+	int longitudTexto = MeasureText(titulo, 50);
+	DrawRectangle(0, VENTANA_ALTO / 2 - height/2, VENTANA_ANCHO, height, Color{ 0, 0, 0, 235 });
+	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, (VENTANA_ALTO / 2 - height / 2)+20, 50, RAYWHITE);
+	longitudTexto = MeasureText(texto, 30);
+	DrawText(texto, VENTANA_ANCHO / 2 - longitudTexto / 2, (VENTANA_ALTO / 2 - height / 2) + 70, 30, RAYWHITE);
 }
 
 //WIP

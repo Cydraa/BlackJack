@@ -1,24 +1,35 @@
 #include "Titulo.hpp"
 
+extern bool exitWindowRequested;
+extern int seleccionPausa;
+
 void IniciarTitulo(short &seleccion, Pantalla & pantallaActual)
 {
-	if (IsKeyPressed(KEY_DOWN))
+	if (exitWindowRequested == false)
 	{
-		if (seleccion < 4) ++seleccion;
-		else seleccion = 4;
-	}
+		if (IsKeyPressed(KEY_DOWN))
+		{
+			if (seleccion < 4) ++seleccion;
+			else seleccion = 4;
+		}
 
-	if (IsKeyPressed(KEY_UP))
-	{
-		if (seleccion > 0) --seleccion;
-		else seleccion = 0;
-	}
+		if (IsKeyPressed(KEY_UP))
+		{
+			if (seleccion > 0) --seleccion;
+			else seleccion = 0;
+		}
 
-	switch (seleccion)
+		switch (seleccion)
+		{
+		case JUEGO: if (IsKeyPressed(KEY_ENTER)) pantallaActual = JUEGO; break;
+		case REGLAS: if (IsKeyPressed(KEY_ENTER)) pantallaActual = REGLAS; break;
+		case CREDITOS: if (IsKeyPressed(KEY_ENTER)) pantallaActual = CREDITOS; break;
+		case SALIR: if (IsKeyPressed(KEY_ENTER)) exitWindowRequested = true; break;
+		}
+	}
+	else
 	{
-	case JUEGO: if (IsKeyPressed(KEY_ENTER)) pantallaActual = JUEGO; break;
-	case REGLAS: if (IsKeyPressed(KEY_ENTER)) pantallaActual = REGLAS; break;
-	case CREDITOS: if (IsKeyPressed(KEY_ENTER)) pantallaActual = CREDITOS; break;
+		PauseGame();
 	}
 
 }

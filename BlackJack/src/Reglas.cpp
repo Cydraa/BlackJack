@@ -2,5 +2,14 @@
 
 void IniciarReglas(short& seleccion, Pantalla& pantallaActual)
 {
-	if (IsKeyPressed(KEY_ENTER)) pantallaActual = TITULO;
+
+	if (exitWindowRequested == false)
+	{
+		if (IsKeyPressed(KEY_ENTER)) pantallaActual = TITULO;
+	}
+	else
+	{
+		PauseGame();
+	}
+
 }

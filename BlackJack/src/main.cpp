@@ -2,6 +2,10 @@
 #include "Reglas.hpp"
 #include "Interfaz.hpp"
 
+bool exitWindow = false;
+bool exitWindowRequested = false;
+int seleccionPausa(0);
+
 int main()
 {
 	Pantalla pantallaActual = TITULO;
@@ -12,8 +16,10 @@ int main()
 	SetTargetFPS(60);
 
 	// Loop del juego
-	while (!WindowShouldClose())
+	while (!exitWindow)
 	{
+		if (WindowShouldClose() || IsKeyPressed(KEY_ESCAPE)) { seleccionPausa = 0;  exitWindowRequested = true; };
+
 		//Logica
 		switch (pantallaActual)
 		{
@@ -49,7 +55,35 @@ int main()
 		case CREDITOS:
 			RenderCreditos();
 			break;
+		}
 
+		if (exitWindowRequested)
+		{
+
+			DibujarNotificacion("PAUSA","Deseas salir del juego?");
+			Boton boton;
+			boton.tamTexto = 50;
+
+			boton.texto = "SI";
+			boton.width = MeasureText(boton.texto, boton.tamTexto) + 20;
+			boton.height = boton.tamTexto + 20;
+			boton.pos.x = VENTANA_ANCHO / 2 - boton.width - 20;
+			boton.pos.y = VENTANA_ALTO / 2 + 10;
+			if (seleccionPausa == 0) boton.colorBoton = RED;
+			else boton.colorBoton = DARKBROWN;
+
+
+			DibujarBoton(boton);
+
+			boton.texto = "NO";
+			boton.width = MeasureText(boton.texto, boton.tamTexto) + 20;
+			boton.height = boton.tamTexto + 20;
+			boton.pos.x = VENTANA_ANCHO / 2 + 20;
+			boton.pos.y = VENTANA_ALTO / 2 + 10;
+			if (seleccionPausa == 1) boton.colorBoton = RED;
+			else boton.colorBoton = DARKBROWN;
+
+			DibujarBoton(boton);
 		}
 
 		// end the frame and get ready for the next one  (display frame, poll input, etc...)

@@ -5,6 +5,8 @@
 #define VENTANA_ANCHO 1200
 #define VENTANA_ALTO 800
 
+void DibujarNotificacion(char* texto, char* titulo = " ");
+
 /**
 * \brief Contiene la informacion para generar un boton con texto.
 */
@@ -15,6 +17,8 @@ struct Boton
 	int tamTexto;
 	Color colorTexto;
 	Color colorBoton;
+	int width;
+	int height;
 
 	Boton();
 

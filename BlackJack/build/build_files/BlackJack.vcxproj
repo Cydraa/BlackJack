@@ -539,6 +539,7 @@
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\Reglas.cpp" />
     <ClCompile Include="..\..\src\Titulo.cpp" />
+    <ClCompile Include="Core.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="raylib.vcxproj">
