@@ -75,7 +75,7 @@ void RenderReglas(gameData &gD);
 * \brief Maneja toda la interfaz grafica de la pantalla de creditos.
 * \param gD Estructura de datos del juego.
 */
-void RenderCreditos(gameData &gD);
+void RenderCreditos(gameData& gD, Texture2D logo);
 
 /**
 * \brief Maneja toda la interfaz grafica de la pantalla de pausa.

@@ -49,9 +49,15 @@ void IniciarJuego(gameData& gD, carta deck[], Pantalla& pantallaActual)
 	bool player_got_blackjack = gD.sumPlayer == 21;
 
 	//CONDICIONES DE VICTORIA
+
 	if (player_got_blackjack && !cpu_got_natural_blackjack) {
 	    gD.gameOutcome = VICTORIA;
 	    gD.blackjackOcurred = true;
+	}
+	else if (player_got_blackjack)
+	{
+		gD.gameOutcome = VICTORIA;
+		gD.blackjackOcurred = true;
 	}
 	else if (player_got_blackjack && cpu_got_natural_blackjack) {
 	    gD.gameOutcome = EMPATE;

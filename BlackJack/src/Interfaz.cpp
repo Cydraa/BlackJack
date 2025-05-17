@@ -65,6 +65,11 @@ void RenderTitulo(gameData &gD)
 		DibujarBoton(botonesMenu[i]);
 	}
 
+	longitudTexto = MeasureText("Muevete arriba y abajo con las teclas direccionales.", 40);
+	DrawText("Muevete arriba y abajo con las teclas direccionales.", VENTANA_ANCHO / 2 - longitudTexto / 2, 680, 40, BLACK);
+	longitudTexto = MeasureText("Presiona ENTER para continuar.", 40);
+	DrawText("Presiona ENTER para continuar.", VENTANA_ANCHO / 2 - longitudTexto / 2, 750, 40, BLACK);
+
 }
 
 void DibujarNotificacion(Notificacion notif)
@@ -150,27 +155,64 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 void RenderReglas(gameData &gD)
 {
 	int longitudTexto;
+
 	const char* titulo = { "Reglas" };
-
-	ClearBackground(DARKPURPLE);
-
+	ClearBackground(DARKBROWN);
 	longitudTexto = MeasureText(titulo, 80);
-	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, 100, 80, RAYWHITE);
+	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, 20, 80, RAYWHITE);
 
-	longitudTexto = MeasureText("PRUEBA: Presiona ENTER para regresar", 40);
-	DrawText("PRUEBA: Presiona ENTER para regresar", VENTANA_ANCHO / 2 - longitudTexto / 2, 200, 40, BEIGE);
+	DrawText("Este es un juego de un solo jugador contra una mesa CPU."
+		"\nEl juego consiste en obtener un valor mayor al contrincante\n"
+		"sin pasarte de 21.\n"
+		"Al inicio del juego el jugador saca automaticamente dos cartas.\n"
+		"El jugador puede pedir tantas cartas como desee hasta que se plante.\n"
+		"Una vez plantado, el dealer sacara del mazo sus cartas."
+		, 20, 130, 20, RAYWHITE);
+
+	DrawText("CONTROLES", 620, 320, 40, RAYWHITE);
+	DrawText("Usa las flechas direccionales para moverte entre los menus.\n"
+		"Presiona ENTER para confirmar tu seleccion\n"
+		"Presiona ESC para salir del juego", 620, 360, 20, RAYWHITE);
+
+
+	DrawText("CONDICIONES DE VICTORIA", 20, 500, 40, RAYWHITE);
+	DrawText("La condiccion de blackjack se obtiene cuando se obtiene al sacar 21.\n"
+		"Si al terminar el juego\n"
+		"El jugador tiene un puntaje menor a 21 pero mayor al dealer, gana.\n"
+		"La mesa se pasa de 21, el jugador gana.\n"
+		"El jugador obtiene un 21 antes que la mesa, el jugador gana.\n"
+		"La mesa obtiene un 21, el jguador pierde.\n", 20, 540, 20, RAYWHITE);
+
+	longitudTexto = MeasureText("Presiona ENTER para regresar", 40);
+	DrawText("Presiona ENTER para regresar", VENTANA_ANCHO / 2 - longitudTexto / 2, 750, 40, RAYWHITE);
 }
 
 //WIP
-void RenderCreditos(gameData &gD)
+void RenderCreditos(gameData &gD, Texture2D logo)
 {
 	int longitudTexto;
+
 	const char* titulo = { "Creditos" };
-
-	ClearBackground(DARKBROWN);
-
+	ClearBackground(Color{ 240,223,219,255 });
 	longitudTexto = MeasureText(titulo, 80);
-	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, 100, 80, RAYWHITE);
+	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, 20, 80, BLACK);
+
+	DrawText("Programa elaborado como proyecto final de Programacion de Computadoras de \n"
+		"de la Licenciatura en Ciencias de la Computacion de la Universidad de Sonora.", 20, 200, 30, BLACK);
+
+	DrawText("Presentado el 17 de mayo del 2025.", 20, 300, 30, BLACK);
+
+	DrawText("Desarrolladores: \n"
+		"Ana Paulina Sortillon Sortillon\n"
+		"Denzel Omar Rivera Urias\n"
+		"Jovanna Amiraxel Reyes Casillas", 20, 400, 30, BLACK);
+	Vector2 pos;
+	pos.x = 700;
+	pos.y = 300;
+	DrawTextureEx(logo, pos, 0, 0.2, WHITE);
+
+	longitudTexto = MeasureText("Presiona ENTER para regresar", 40);
+	DrawText("Presiona ENTER para regresar", VENTANA_ANCHO / 2 - longitudTexto / 2, 750, 40, BLACK);
 
 }
 

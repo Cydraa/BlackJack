@@ -3,6 +3,7 @@
 #include "Interfaz.hpp"
 #include "resource_dir.h"
 #include "JuegoBJ.hpp"
+#include "Creditos.hpp"
 
 //int main();
 
@@ -22,6 +23,7 @@ int main()
 	//Cargamos los recursos
 	Texture2D cardTextures[53];
 	LoadAllTextures(cardTextures);
+	Texture2D logo = LoadTexture("lcc_logo.png");
 
 	SetTargetFPS(60);
 
@@ -46,6 +48,11 @@ int main()
 			case REGLAS:
 			{
 				IniciarReglas(gD, pantallaActual);
+				break;
+			}
+			case CREDITOS:
+			{
+				IniciarCreditos(gD, pantallaActual);
 				break;
 			}
 			case RESET:
@@ -87,7 +94,7 @@ int main()
 			break;
 
 		case CREDITOS:
-			RenderCreditos(gD);
+			RenderCreditos(gD,logo);
 			break;
 		case PLAY_AGAIN:
 		{
