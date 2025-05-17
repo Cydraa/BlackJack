@@ -152,12 +152,12 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 }
 
 //WIP
-void RenderReglas(gameData &gD)
+void RenderReglas(gameData& gD, Texture2D textures[])
 {
 	int longitudTexto;
 
 	const char* titulo = { "Reglas" };
-	ClearBackground(DARKBROWN);
+	ClearBackground(Color{ 51,26,26,255 });
 	longitudTexto = MeasureText(titulo, 80);
 	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, 20, 80, RAYWHITE);
 
@@ -177,11 +177,29 @@ void RenderReglas(gameData &gD)
 
 	DrawText("CONDICIONES DE VICTORIA", 20, 500, 40, RAYWHITE);
 	DrawText("La condiccion de blackjack se obtiene cuando se obtiene al sacar 21.\n"
-		"Si al terminar el juego\n"
+		"Si al terminar el juego:\n"
 		"El jugador tiene un puntaje menor a 21 pero mayor al dealer, gana.\n"
 		"La mesa se pasa de 21, el jugador gana.\n"
 		"El jugador obtiene un 21 antes que la mesa, el jugador gana.\n"
-		"La mesa obtiene un 21, el jguador pierde.\n", 20, 540, 20, RAYWHITE);
+		"La mesa obtiene un 21, el juguador pierde.\n"
+		"De otro modo, si ambos obtienen el mismo valor, hay un empate\n",20, 540, 20, RAYWHITE);
+
+	Vector2 pos;
+	pos.y = 500;
+
+	pos.x = 850;
+	DrawTextureEx(textures[39], pos, 0, 0.25, WHITE);
+
+	DrawText("Valor: 1 u 11", 840, 640, 20, RAYWHITE);
+	DrawText("Asignado a conveniencia.", 780, 660, 20, RAYWHITE);
+
+	pos.x = 1000;
+	DrawTextureEx(textures[10], pos, 0, 0.25, WHITE);
+	pos.x = 1050;
+	DrawTextureEx(textures[24], pos, 0, 0.25, WHITE);
+	pos.x = 1100;
+	DrawTextureEx(textures[38], pos, 0, 0.25, WHITE);
+	DrawText("Valor: 10", 1050, 640, 20, RAYWHITE);
 
 	longitudTexto = MeasureText("Presiona ENTER para regresar", 40);
 	DrawText("Presiona ENTER para regresar", VENTANA_ANCHO / 2 - longitudTexto / 2, 750, 40, RAYWHITE);

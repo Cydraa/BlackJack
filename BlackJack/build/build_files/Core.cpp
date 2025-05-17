@@ -123,3 +123,20 @@ void CreateDeck(carta* deck)
 		}
 	}
 }
+
+gameData::gameData()
+{
+		sumPlayer = 0;
+		sumCPU = 0;
+		gameOutcome = -1; // -1 = sin decidir, 1 = jugador gano, 0 = jugador perdio
+		exitWindow = false;
+		exitWindowRequested = false;
+		selectionPause = 0;
+		selection = 0;
+		player_cards_count = 0;
+		cpu_cards_count = 0;
+		blackjackOcurred = false;
+		selectionGame = 0;
+		isHit = false;
+		isHold = false;
+}

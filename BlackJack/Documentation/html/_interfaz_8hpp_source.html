@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BLACKJACK: Archivo de código fuente C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/src/Interfaz.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BLACKJACK
+   </div>
+   <div id="projectbrief">Este programa es un juego de blackjack simple de un solo jugador.</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_interfaz_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Interfaz.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_interfaz_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_core_8hpp.html">Core.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="src_2_juego_b_j_8hpp.html">JuegoBJ.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="struct_boton.html">   12</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_boton.html#ad4aa53d4e2613ee16a3474d96264785c">Boton</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_struct" href="struct_vector2.html">Vector2</a> pos; </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_boton.html#a982e58169af98425f854674d6532682c">   15</a></span>    <span class="keywordtype">char</span>* <a class="code hl_variable" href="struct_boton.html#a982e58169af98425f854674d6532682c">texto</a>; </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_boton.html#a0f509812a3b069fa967b90bc5d67f10a">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_boton.html#a0f509812a3b069fa967b90bc5d67f10a">tamTexto</a>; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_boton.html#a37b4d23145abb8fd2358fd0affb06025">   17</a></span>    <a class="code hl_struct" href="struct_color.html">Color</a> <a class="code hl_variable" href="struct_boton.html#a37b4d23145abb8fd2358fd0affb06025">colorTexto</a>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_boton.html#a75e17d357d29b595f0a02c0fffdd5d5a">   18</a></span>    <a class="code hl_struct" href="struct_color.html">Color</a> <a class="code hl_variable" href="struct_boton.html#a75e17d357d29b595f0a02c0fffdd5d5a">colorBoton</a>; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_boton.html#ac26b864880dc19b1ea592798c56f672f">   19</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_boton.html#ac26b864880dc19b1ea592798c56f672f">width</a>; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_boton.html#ab90478f092e9e5d8f000ebeee1be1792">   20</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_boton.html#ab90478f092e9e5d8f000ebeee1be1792">height</a>; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="struct_boton.html#ad4aa53d4e2613ee16a3474d96264785c">Boton</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_notificacion.html">   32</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_notificacion.html#a52e465384e3475ecbddcbbae36a6a341">Notificacion</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_struct" href="struct_vector2.html">Vector2</a> pos; </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_notificacion.html#a62f548210b521a54db0770cd2ef2a9a1">   35</a></span>    <span class="keywordtype">char</span>* <a class="code hl_variable" href="struct_notificacion.html#a62f548210b521a54db0770cd2ef2a9a1">titulo</a>; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_notificacion.html#a071f0b5bc660ad5e04a3d2ade1474877">   36</a></span>    <span class="keywordtype">char</span>* <a class="code hl_variable" href="struct_notificacion.html#a071f0b5bc660ad5e04a3d2ade1474877">texto</a>; </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_notificacion.html#adc065433522d2319e0cf20fb23cf39c9">   37</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_notificacion.html#adc065433522d2319e0cf20fb23cf39c9">tamTitulo</a>; </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_notificacion.html#a31b1ebbace77b817c2680482ef15978a">   38</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_notificacion.html#a31b1ebbace77b817c2680482ef15978a">tamTexto</a>; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_notificacion.html#a87df9f145c9e58feee25ad8a0b583b3b">   39</a></span>    <a class="code hl_struct" href="struct_color.html">Color</a> <a class="code hl_variable" href="struct_notificacion.html#a87df9f145c9e58feee25ad8a0b583b3b">colorTitulo</a>; </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_notificacion.html#a587d20b058105c042dcf9dc2588faddd">   40</a></span>    <a class="code hl_struct" href="struct_color.html">Color</a> <a class="code hl_variable" href="struct_notificacion.html#a587d20b058105c042dcf9dc2588faddd">colorTexto</a>; </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_notificacion.html#a9105418b1c9cefb552bd60a8ff858cae">   41</a></span>    <a class="code hl_struct" href="struct_color.html">Color</a> <a class="code hl_variable" href="struct_notificacion.html#a9105418b1c9cefb552bd60a8ff858cae">colorFondo</a>; </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_notificacion.html#aba1eb5c8a79508a413bec8df6b433f93">   42</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_notificacion.html#aba1eb5c8a79508a413bec8df6b433f93">width</a>; </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_notificacion.html#a8ebd83acb0000c59e177253878f62809">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_notificacion.html#a8ebd83acb0000c59e177253878f62809">height</a>; </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_function" href="struct_notificacion.html#a52e465384e3475ecbddcbbae36a6a341">Notificacion</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="_interfaz_8hpp.html#ac1ecc21fb55c6d0a32726705c7be5df1">DibujarBoton</a>(<a class="code hl_struct" href="struct_boton.html">Boton</a> boton);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> <a class="code hl_function" href="_interfaz_8hpp.html#a2a211a09864f3d56e6f7eb6107669eee">DibujarNotificacion</a>(<a class="code hl_struct" href="struct_notificacion.html">Notificacion</a> notif);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="_interfaz_8hpp.html#ab775e411f0f8faad4d0e3f3b802ece30">RenderTitulo</a>(<a class="code hl_struct" href="structgame_data.html">gameData</a> &amp;gD);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">void</span> <a class="code hl_function" href="_interfaz_8hpp.html#a3d69986fd1dde8475d56feaa7cb5f322">RenderJuego</a>(Texture2D cardTextures[], <a class="code hl_struct" href="structgame_data.html">gameData</a> &amp;gD, <a class="code hl_struct" href="structcarta.html">carta</a> deck[]);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keywordtype">void</span> <a class="code hl_function" href="_interfaz_8hpp.html#a5d5ca2711d779ec3304cc1169d701b4d">RenderReglas</a>(<a class="code hl_struct" href="structgame_data.html">gameData</a>&amp; gD, Texture2D textures[]);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">void</span> <a class="code hl_function" href="_interfaz_8hpp.html#af7472358e793cc13343bfe2a734fa677">RenderCreditos</a>(<a class="code hl_struct" href="structgame_data.html">gameData</a>&amp; gD, Texture2D logo);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keywordtype">void</span> <a class="code hl_function" href="_interfaz_8hpp.html#abe0ecfc8e1522e6fd4420e3202dd62f4">RenderPausa</a>(<a class="code hl_struct" href="structgame_data.html">gameData</a> &amp;gD);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keywordtype">void</span> <a class="code hl_function" href="_interfaz_8hpp.html#ac5a80bfbba4c30d184326b6cd789e7cb">RenderPlayAgain</a>(Texture2D cardTextures[], <a class="code hl_struct" href="structgame_data.html">gameData</a> &amp;gD, <a class="code hl_struct" href="structcarta.html">carta</a> deck[]);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keywordtype">void</span> <a class="code hl_function" href="_interfaz_8hpp.html#a449a988e12f808b2b7001936d619631d">RenderPickCard</a>(Texture2D cardTextures[], <a class="code hl_struct" href="structgame_data.html">gameData</a>&amp; gD, <a class="code hl_struct" href="structcarta.html">carta</a> deck[]);</div>
+<div class="ttc" id="a_core_8hpp_html"><div class="ttname"><a href="_core_8hpp.html">Core.hpp</a></div></div>
+<div class="ttc" id="a_interfaz_8hpp_html_a2a211a09864f3d56e6f7eb6107669eee"><div class="ttname"><a href="_interfaz_8hpp.html#a2a211a09864f3d56e6f7eb6107669eee">DibujarNotificacion</a></div><div class="ttdeci">void DibujarNotificacion(Notificacion notif)</div><div class="ttdoc">Dibuja una notificacion.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:75</div></div>
+<div class="ttc" id="a_interfaz_8hpp_html_a3d69986fd1dde8475d56feaa7cb5f322"><div class="ttname"><a href="_interfaz_8hpp.html#a3d69986fd1dde8475d56feaa7cb5f322">RenderJuego</a></div><div class="ttdeci">void RenderJuego(Texture2D cardTextures[], gameData &amp;gD, carta deck[])</div><div class="ttdoc">Maneja toda la interfaz grafica de la pantalla del juego.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:94</div></div>
+<div class="ttc" id="a_interfaz_8hpp_html_a449a988e12f808b2b7001936d619631d"><div class="ttname"><a href="_interfaz_8hpp.html#a449a988e12f808b2b7001936d619631d">RenderPickCard</a></div><div class="ttdeci">void RenderPickCard(Texture2D cardTextures[], gameData &amp;gD, carta deck[])</div><div class="ttdoc">Maneja toda la interfaz grafica de la pantalla de cuando se elije una carta.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:307</div></div>
+<div class="ttc" id="a_interfaz_8hpp_html_a5d5ca2711d779ec3304cc1169d701b4d"><div class="ttname"><a href="_interfaz_8hpp.html#a5d5ca2711d779ec3304cc1169d701b4d">RenderReglas</a></div><div class="ttdeci">void RenderReglas(gameData &amp;gD, Texture2D textures[])</div><div class="ttdoc">Maneja toda la interfaz grafica de la pantalla de reglas.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:155</div></div>
+<div class="ttc" id="a_interfaz_8hpp_html_ab775e411f0f8faad4d0e3f3b802ece30"><div class="ttname"><a href="_interfaz_8hpp.html#ab775e411f0f8faad4d0e3f3b802ece30">RenderTitulo</a></div><div class="ttdeci">void RenderTitulo(gameData &amp;gD)</div><div class="ttdoc">Maneja toda la interfaz grafica de la pantalla del titulo.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:39</div></div>
+<div class="ttc" id="a_interfaz_8hpp_html_abe0ecfc8e1522e6fd4420e3202dd62f4"><div class="ttname"><a href="_interfaz_8hpp.html#abe0ecfc8e1522e6fd4420e3202dd62f4">RenderPausa</a></div><div class="ttdeci">void RenderPausa(gameData &amp;gD)</div><div class="ttdoc">Maneja toda la interfaz grafica de la pantalla de pausa.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:237</div></div>
+<div class="ttc" id="a_interfaz_8hpp_html_ac1ecc21fb55c6d0a32726705c7be5df1"><div class="ttname"><a href="_interfaz_8hpp.html#ac1ecc21fb55c6d0a32726705c7be5df1">DibujarBoton</a></div><div class="ttdeci">void DibujarBoton(Boton boton)</div><div class="ttdoc">Dibuja un boton de la interfaz.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:30</div></div>
+<div class="ttc" id="a_interfaz_8hpp_html_ac5a80bfbba4c30d184326b6cd789e7cb"><div class="ttname"><a href="_interfaz_8hpp.html#ac5a80bfbba4c30d184326b6cd789e7cb">RenderPlayAgain</a></div><div class="ttdeci">void RenderPlayAgain(Texture2D cardTextures[], gameData &amp;gD, carta deck[])</div><div class="ttdoc">Maneja toda la interfaz grafica de la pantalla del final del juego.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:271</div></div>
+<div class="ttc" id="a_interfaz_8hpp_html_af7472358e793cc13343bfe2a734fa677"><div class="ttname"><a href="_interfaz_8hpp.html#af7472358e793cc13343bfe2a734fa677">RenderCreditos</a></div><div class="ttdeci">void RenderCreditos(gameData &amp;gD, Texture2D logo)</div><div class="ttdoc">Maneja toda la interfaz grafica de la pantalla de creditos.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:209</div></div>
+<div class="ttc" id="asrc_2_juego_b_j_8hpp_html"><div class="ttname"><a href="src_2_juego_b_j_8hpp.html">JuegoBJ.hpp</a></div></div>
+<div class="ttc" id="astruct_boton_html"><div class="ttname"><a href="struct_boton.html">Boton</a></div><div class="ttdoc">Contiene la informacion para generar un boton con texto.</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:13</div></div>
+<div class="ttc" id="astruct_boton_html_a0f509812a3b069fa967b90bc5d67f10a"><div class="ttname"><a href="struct_boton.html#a0f509812a3b069fa967b90bc5d67f10a">Boton::tamTexto</a></div><div class="ttdeci">int tamTexto</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:16</div></div>
+<div class="ttc" id="astruct_boton_html_a37b4d23145abb8fd2358fd0affb06025"><div class="ttname"><a href="struct_boton.html#a37b4d23145abb8fd2358fd0affb06025">Boton::colorTexto</a></div><div class="ttdeci">Color colorTexto</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:17</div></div>
+<div class="ttc" id="astruct_boton_html_a75e17d357d29b595f0a02c0fffdd5d5a"><div class="ttname"><a href="struct_boton.html#a75e17d357d29b595f0a02c0fffdd5d5a">Boton::colorBoton</a></div><div class="ttdeci">Color colorBoton</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:18</div></div>
+<div class="ttc" id="astruct_boton_html_a982e58169af98425f854674d6532682c"><div class="ttname"><a href="struct_boton.html#a982e58169af98425f854674d6532682c">Boton::texto</a></div><div class="ttdeci">char * texto</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:15</div></div>
+<div class="ttc" id="astruct_boton_html_ab90478f092e9e5d8f000ebeee1be1792"><div class="ttname"><a href="struct_boton.html#ab90478f092e9e5d8f000ebeee1be1792">Boton::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:20</div></div>
+<div class="ttc" id="astruct_boton_html_ac26b864880dc19b1ea592798c56f672f"><div class="ttname"><a href="struct_boton.html#ac26b864880dc19b1ea592798c56f672f">Boton::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:19</div></div>
+<div class="ttc" id="astruct_boton_html_ad4aa53d4e2613ee16a3474d96264785c"><div class="ttname"><a href="struct_boton.html#ad4aa53d4e2613ee16a3474d96264785c">Boton::Boton</a></div><div class="ttdeci">Boton()</div><div class="ttdoc">Constructor del boton.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:3</div></div>
+<div class="ttc" id="astruct_color_html"><div class="ttname"><a href="struct_color.html">Color</a></div><div class="ttdef"><b>Definition</b> raylib.h:247</div></div>
+<div class="ttc" id="astruct_notificacion_html"><div class="ttname"><a href="struct_notificacion.html">Notificacion</a></div><div class="ttdoc">Contiene la informacion para generar una notificacion con texto.</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:33</div></div>
+<div class="ttc" id="astruct_notificacion_html_a071f0b5bc660ad5e04a3d2ade1474877"><div class="ttname"><a href="struct_notificacion.html#a071f0b5bc660ad5e04a3d2ade1474877">Notificacion::texto</a></div><div class="ttdeci">char * texto</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:36</div></div>
+<div class="ttc" id="astruct_notificacion_html_a31b1ebbace77b817c2680482ef15978a"><div class="ttname"><a href="struct_notificacion.html#a31b1ebbace77b817c2680482ef15978a">Notificacion::tamTexto</a></div><div class="ttdeci">int tamTexto</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:38</div></div>
+<div class="ttc" id="astruct_notificacion_html_a52e465384e3475ecbddcbbae36a6a341"><div class="ttname"><a href="struct_notificacion.html#a52e465384e3475ecbddcbbae36a6a341">Notificacion::Notificacion</a></div><div class="ttdeci">Notificacion()</div><div class="ttdoc">Constructor de la notificacion.</div><div class="ttdef"><b>Definition</b> Interfaz.cpp:15</div></div>
+<div class="ttc" id="astruct_notificacion_html_a587d20b058105c042dcf9dc2588faddd"><div class="ttname"><a href="struct_notificacion.html#a587d20b058105c042dcf9dc2588faddd">Notificacion::colorTexto</a></div><div class="ttdeci">Color colorTexto</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:40</div></div>
+<div class="ttc" id="astruct_notificacion_html_a62f548210b521a54db0770cd2ef2a9a1"><div class="ttname"><a href="struct_notificacion.html#a62f548210b521a54db0770cd2ef2a9a1">Notificacion::titulo</a></div><div class="ttdeci">char * titulo</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:35</div></div>
+<div class="ttc" id="astruct_notificacion_html_a87df9f145c9e58feee25ad8a0b583b3b"><div class="ttname"><a href="struct_notificacion.html#a87df9f145c9e58feee25ad8a0b583b3b">Notificacion::colorTitulo</a></div><div class="ttdeci">Color colorTitulo</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:39</div></div>
+<div class="ttc" id="astruct_notificacion_html_a8ebd83acb0000c59e177253878f62809"><div class="ttname"><a href="struct_notificacion.html#a8ebd83acb0000c59e177253878f62809">Notificacion::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:43</div></div>
+<div class="ttc" id="astruct_notificacion_html_a9105418b1c9cefb552bd60a8ff858cae"><div class="ttname"><a href="struct_notificacion.html#a9105418b1c9cefb552bd60a8ff858cae">Notificacion::colorFondo</a></div><div class="ttdeci">Color colorFondo</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:41</div></div>
+<div class="ttc" id="astruct_notificacion_html_aba1eb5c8a79508a413bec8df6b433f93"><div class="ttname"><a href="struct_notificacion.html#aba1eb5c8a79508a413bec8df6b433f93">Notificacion::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:42</div></div>
+<div class="ttc" id="astruct_notificacion_html_adc065433522d2319e0cf20fb23cf39c9"><div class="ttname"><a href="struct_notificacion.html#adc065433522d2319e0cf20fb23cf39c9">Notificacion::tamTitulo</a></div><div class="ttdeci">int tamTitulo</div><div class="ttdef"><b>Definition</b> Interfaz.hpp:37</div></div>
+<div class="ttc" id="astruct_vector2_html"><div class="ttname"><a href="struct_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition</b> raylib.h:215</div></div>
+<div class="ttc" id="astructcarta_html"><div class="ttname"><a href="structcarta.html">carta</a></div><div class="ttdoc">Estructura de una carta.</div><div class="ttdef"><b>Definition</b> Core.hpp:64</div></div>
+<div class="ttc" id="astructgame_data_html"><div class="ttname"><a href="structgame_data.html">gameData</a></div><div class="ttdoc">Estructura principal del juego. Contiene todas las variables que se deben de seguir para comunicarse ...</div><div class="ttdef"><b>Definition</b> Core.hpp:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_interfaz_8hpp.html">Interfaz.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

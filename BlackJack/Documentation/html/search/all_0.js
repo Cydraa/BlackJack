@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['0_0',['0',['../C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/README.md#autotoc_md91',1,'For OpenGLES 2.0'],['../C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/README.md#autotoc_md92',1,'For OpenGLES 3.0'],['../md__c_1_2_users_2_gamer_house_2_documents_20___u_n_i_s_o_n_2_programacion_01_i_2_black_jack_2_bl91f6beb557d8e16bbee1106277b857e3.html#autotoc_md44',1,'notes on raylib 2.0'],['../md__c_1_2_users_2_gamer_house_2_documents_20___u_n_i_s_o_n_2_programacion_01_i_2_black_jack_2_bl91f6beb557d8e16bbee1106277b857e3.html#autotoc_md46',1,'notes on raylib 3.0'],['../md__c_1_2_users_2_gamer_house_2_documents_20___u_n_i_s_o_n_2_programacion_01_i_2_black_jack_2_bl91f6beb557d8e16bbee1106277b857e3.html#autotoc_md52',1,'notes on raylib 5.0']]],
+  ['0_208th_20anniversary_20edition_1',['notes on raylib 4.0 - 8th Anniversary Edition',['../md__c_1_2_users_2_gamer_house_2_documents_20___u_n_i_s_o_n_2_programacion_01_i_2_black_jack_2_bl91f6beb557d8e16bbee1106277b857e3.html#autotoc_md49',1,'']]]
+];

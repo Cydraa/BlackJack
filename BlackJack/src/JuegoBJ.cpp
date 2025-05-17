@@ -154,6 +154,5 @@ carta::carta() {
 	denominacion = 0;
 	pos.x = 0;
 	pos.y = 0;
-	textura = 52;
 	isSelected = false;
 }

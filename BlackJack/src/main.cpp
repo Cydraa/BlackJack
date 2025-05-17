@@ -90,7 +90,7 @@ int main()
 			break;
 
 		case REGLAS:
-			RenderReglas(gD);
+			RenderReglas(gD,cardTextures);
 			break;
 
 		case CREDITOS:

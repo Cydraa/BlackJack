@@ -8,8 +8,8 @@ void IniciarTitulo(gameData &gD, Pantalla & pantallaActual)
 
 		if (IsKeyPressed(KEY_DOWN))
 		{
-			if (gD.selection < 4) ++gD.selection;
-			else gD.selection = 4;
+			if (gD.selection < 3) ++gD.selection;
+			else gD.selection = 3;
 		}
 
 		if (IsKeyPressed(KEY_UP))

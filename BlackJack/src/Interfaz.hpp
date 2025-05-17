@@ -1,5 +1,8 @@
 #pragma once
 
+/** @file
+*/
+
 #include "Core.hpp"
 #include "JuegoBJ.hpp"
 
@@ -8,14 +11,17 @@
 */
 struct Boton
 {
-	Vector2 pos;
-	char* texto;
-	int tamTexto;
-	Color colorTexto;
-	Color colorBoton;
-	int width;
-	int height;
+	Vector2 pos; /**Posicion x,yen pixeles*/
+	char* texto; /**Texto*/
+	int tamTexto; /**Tama&nacute;o del texto*/
+	Color colorTexto; /**colorTexto*/
+	Color colorBoton; /**colorBoton*/
+	int width; /**Ancho*/
+	int height; /**Alto*/
 
+	/**
+	* \brief Constructor del boton.
+	*/
 	Boton();
 
 };
@@ -25,17 +31,20 @@ struct Boton
 */
 struct Notificacion
 {
-	Vector2 pos;
-	char* titulo;
-	char* texto;
-	int tamTitulo;
-	int tamTexto;
-	Color colorTitulo;
-	Color colorTexto;
-	Color colorFondo;
-	int width;
-	int height;
+	Vector2 pos; /**Posicion x,y en pixeles*/
+	char* titulo; /**Titulo*/
+	char* texto; /**Texto*/
+	int tamTitulo; /**Tama&nacute;o del titulo*/
+	int tamTexto; /**Tama& nacute; o del texto*/
+	Color colorTitulo; /**Color del titulo*/
+	Color colorTexto; /**Color del texto*/
+	Color colorFondo; /**Color del fondo*/
+	int width; /**Ancho*/
+	int height; /**Alto*/
 
+	/**
+	* \brief Constructor de la notificacion.
+	*/
 	Notificacion();
 };
 
@@ -67,9 +76,10 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD, carta deck[]);
 
 /**
 * \brief Maneja toda la interfaz grafica de la pantalla de reglas.
-* \param gD Estructura de datos del juego.
+* \param gD Estructura de datos del juego
+* \param textures Arreglo de las texturas de cartas.
 */
-void RenderReglas(gameData &gD);
+void RenderReglas(gameData& gD, Texture2D textures[]);
 
 /**
 * \brief Maneja toda la interfaz grafica de la pantalla de creditos.

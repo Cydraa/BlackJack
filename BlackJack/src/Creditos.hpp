@@ -1,5 +1,8 @@
 #pragma once
 
+/** @file
+*/
+
 #include "Core.hpp"
 
 /**
@@ -7,5 +10,4 @@
 * \param gD Estructura de datos del juego.
 * \param pantallaActual Estado del juego.
 */
-
 void IniciarCreditos(gameData& gD, Pantalla& pantallaActual);

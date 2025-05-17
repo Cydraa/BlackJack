@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BLACKJACK: Archivo de código fuente C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/src/Core.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BLACKJACK
+   </div>
+   <div id="projectbrief">Este programa es un juego de blackjack simple de un solo jugador.</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_core_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Core.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_core_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;raylib.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define MENU_MAX 4</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define VENTANA_ANCHO 1280</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define VENTANA_ALTO 800</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define TEXTURE_COUNT 52</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using </span>std::string;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using </span>std::sprintf;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structgame_data.html">   22</a></span><span class="keyword">struct </span><a class="code hl_function" href="structgame_data.html#a51a94b0b34538f97f0316a9bdcc55200">gameData</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> sumPlayer; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structgame_data.html#a4002119736ede9a1d97017a90b7de01c">   25</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structgame_data.html#a4002119736ede9a1d97017a90b7de01c">sumCPU</a>; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structgame_data.html#a28cbf2eb686cd516d5f932647e7e2083">   26</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structgame_data.html#a28cbf2eb686cd516d5f932647e7e2083">gameOutcome</a>; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structgame_data.html#a1cbcebe8d79d069615ea02ddb31f8793">   27</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structgame_data.html#a1cbcebe8d79d069615ea02ddb31f8793">exitWindow</a>; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structgame_data.html#af72abe6e757f6ec930951ab83efea25d">   28</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structgame_data.html#af72abe6e757f6ec930951ab83efea25d">exitWindowRequested</a>; </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structgame_data.html#a5520f307db3c182f423723c56ea24ca4">   29</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structgame_data.html#a5520f307db3c182f423723c56ea24ca4">selectionPause</a>; </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structgame_data.html#a0562acddd5ebe59573ff7d6eb8f6654d">   30</a></span>    <span class="keywordtype">short</span> <a class="code hl_variable" href="structgame_data.html#a0562acddd5ebe59573ff7d6eb8f6654d">selection</a>; </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structgame_data.html#a384f6ced90fe7c93cdfbd1d2cab97221">   31</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structgame_data.html#a384f6ced90fe7c93cdfbd1d2cab97221">cardsPlayer</a>[26] = {}; </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structgame_data.html#ad7396c2f5d5e7338cc8b18691876ab1b">   32</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structgame_data.html#ad7396c2f5d5e7338cc8b18691876ab1b">cardsCPU</a>[26] = {}; </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structgame_data.html#af05564249f02667ab41bf2349db8476e">   33</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structgame_data.html#af05564249f02667ab41bf2349db8476e">player_cards_count</a>; </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structgame_data.html#ab8197df0507a461cb1904860a30f6211">   34</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structgame_data.html#ab8197df0507a461cb1904860a30f6211">cpu_cards_count</a>; </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structgame_data.html#a74f897d5f611f94ca7f2306cc60a7b65">   35</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structgame_data.html#a74f897d5f611f94ca7f2306cc60a7b65">blackjackOcurred</a>; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structgame_data.html#ab8d8afce1df37da9d39d501114d713ea">   36</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structgame_data.html#ab8d8afce1df37da9d39d501114d713ea">selectionGame</a>; </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structgame_data.html#ae4f481c999a04a9d4636c73493ebccfc">   37</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structgame_data.html#ae4f481c999a04a9d4636c73493ebccfc">isHit</a>; </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structgame_data.html#ac50d8c6048151db6ab78a4b94711009c">   38</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structgame_data.html#ac50d8c6048151db6ab78a4b94711009c">isHold</a>; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="structgame_data.html#a51a94b0b34538f97f0316a9bdcc55200">gameData</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="_core_8hpp.html#a3379b2380d4dd55e6034b45463536f3c">   47</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="_core_8hpp.html#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a> { TITULO = -1, JUEGO, REGLAS, CREDITOS, SALIR, RESET, PLAY_AGAIN, PICK_CARD } <a class="code hl_enumeration" href="_core_8hpp.html#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="_core_8hpp.html#ac647f25cdbb42ac78e9dd2a73af8eb57">   50</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_core_8hpp.html#ac647f25cdbb42ac78e9dd2a73af8eb57">Palo</a> { NULO_PALO = 0, CORAZON = 1, DIAMANTE, TREBOL, PICA };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="_core_8hpp.html#a51895b572f6326a7f2db364ea2fa886f">   53</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_core_8hpp.html#a51895b572f6326a7f2db364ea2fa886f">Opciones</a> { PEDIR = 0, PLANTARSE };</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="_core_8hpp.html#a67ecc8805edac7c43e4083ba3af7ab4c">   56</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_core_8hpp.html#a67ecc8805edac7c43e4083ba3af7ab4c">Actores</a> { DECK = -1, CPU, JUGADOR };</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="_core_8hpp.html#aafbbb0042a27bcf65d4e58f485a2ae69">   59</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_core_8hpp.html#aafbbb0042a27bcf65d4e58f485a2ae69">Outcome</a> { SIN_DECIDIR = -1, PERDIDA, VICTORIA, EMPATE };</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structcarta.html">   64</a></span><span class="keyword">struct </span><a class="code hl_function" href="structcarta.html#a521288ff360098414d5375772a8421e8">carta</a> {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">int</span> palo;         </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structcarta.html#a8947f87e0cd7c5fa51eacc085f397fbb">   66</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structcarta.html#a8947f87e0cd7c5fa51eacc085f397fbb">denominacion</a>; </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structcarta.html#af5ae61a9c0cf19113942b12962a14030">   67</a></span>    <a class="code hl_struct" href="struct_vector2.html">Vector2</a> <a class="code hl_variable" href="structcarta.html#af5ae61a9c0cf19113942b12962a14030">pos</a>; </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structcarta.html#aa74527a432f699333753c08bc72202d4">   68</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structcarta.html#aa74527a432f699333753c08bc72202d4">isSelected</a>; </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_function" href="structcarta.html#a521288ff360098414d5375772a8421e8">carta</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keywordtype">void</span> <a class="code hl_function" href="_core_8hpp.html#aa8e428b6ed71c27373bc6a8aa0ae9332">PauseGame</a>(<a class="code hl_struct" href="structgame_data.html">gameData</a> &amp;gD);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keywordtype">void</span> <a class="code hl_function" href="_core_8hpp.html#a04b9ef396d08a39718e11c794102be57">LoadAllTextures</a>(Texture2D textures[]);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keywordtype">void</span> <a class="code hl_function" href="_core_8hpp.html#a708a63c603d94939e9f2a30243b88fb9">UnloadAllTextures</a>(Texture2D textures[]);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keywordtype">void</span> <a class="code hl_function" href="_core_8hpp.html#af201f4040fba2fe31e359ae6624d9347">ResetGame</a>(<a class="code hl_struct" href="structgame_data.html">gameData</a>&amp; gD, <a class="code hl_struct" href="structcarta.html">carta</a> deck[], <a class="code hl_enumeration" href="_core_8hpp.html#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a>&amp; PantallaActual);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keywordtype">void</span> <a class="code hl_function" href="_core_8hpp.html#ae5465f95bf0606cf5c572652bbfcbf15">PlayAgain</a>(<a class="code hl_struct" href="structgame_data.html">gameData</a>&amp; gD, <a class="code hl_struct" href="structcarta.html">carta</a> deck[], <a class="code hl_enumeration" href="_core_8hpp.html#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a>&amp; PantallaActual);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordtype">void</span> <a class="code hl_function" href="_core_8hpp.html#aeac908305e56b9609b2af3301c9de0fb">PickCard</a>(<a class="code hl_struct" href="structgame_data.html">gameData</a>&amp; gD, <a class="code hl_struct" href="structcarta.html">carta</a> deck[], <a class="code hl_enumeration" href="_core_8hpp.html#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a>&amp; PantallaActual);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keywordtype">void</span> <a class="code hl_function" href="_core_8hpp.html#af471834a248a0f29149789d542267f20">CreateDeck</a>(<a class="code hl_struct" href="structcarta.html">carta</a>* deck);</div>
+<div class="ttc" id="a_core_8hpp_html_a04b9ef396d08a39718e11c794102be57"><div class="ttname"><a href="_core_8hpp.html#a04b9ef396d08a39718e11c794102be57">LoadAllTextures</a></div><div class="ttdeci">void LoadAllTextures(Texture2D textures[])</div><div class="ttdoc">Carga todas las texturas.</div><div class="ttdef"><b>Definition</b> Core.cpp:27</div></div>
+<div class="ttc" id="a_core_8hpp_html_a3379b2380d4dd55e6034b45463536f3c"><div class="ttname"><a href="_core_8hpp.html#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a></div><div class="ttdeci">Pantalla</div><div class="ttdef"><b>Definition</b> Core.hpp:47</div></div>
+<div class="ttc" id="a_core_8hpp_html_a51895b572f6326a7f2db364ea2fa886f"><div class="ttname"><a href="_core_8hpp.html#a51895b572f6326a7f2db364ea2fa886f">Opciones</a></div><div class="ttdeci">Opciones</div><div class="ttdef"><b>Definition</b> Core.hpp:53</div></div>
+<div class="ttc" id="a_core_8hpp_html_a67ecc8805edac7c43e4083ba3af7ab4c"><div class="ttname"><a href="_core_8hpp.html#a67ecc8805edac7c43e4083ba3af7ab4c">Actores</a></div><div class="ttdeci">Actores</div><div class="ttdef"><b>Definition</b> Core.hpp:56</div></div>
+<div class="ttc" id="a_core_8hpp_html_a708a63c603d94939e9f2a30243b88fb9"><div class="ttname"><a href="_core_8hpp.html#a708a63c603d94939e9f2a30243b88fb9">UnloadAllTextures</a></div><div class="ttdeci">void UnloadAllTextures(Texture2D textures[])</div><div class="ttdoc">Descarga todas las texturas.</div><div class="ttdef"><b>Definition</b> Core.cpp:45</div></div>
+<div class="ttc" id="a_core_8hpp_html_aa8e428b6ed71c27373bc6a8aa0ae9332"><div class="ttname"><a href="_core_8hpp.html#aa8e428b6ed71c27373bc6a8aa0ae9332">PauseGame</a></div><div class="ttdeci">void PauseGame(gameData &amp;gD)</div><div class="ttdoc">Pausa el juego.</div><div class="ttdef"><b>Definition</b> Core.cpp:3</div></div>
+<div class="ttc" id="a_core_8hpp_html_aafbbb0042a27bcf65d4e58f485a2ae69"><div class="ttname"><a href="_core_8hpp.html#aafbbb0042a27bcf65d4e58f485a2ae69">Outcome</a></div><div class="ttdeci">Outcome</div><div class="ttdef"><b>Definition</b> Core.hpp:59</div></div>
+<div class="ttc" id="a_core_8hpp_html_ac647f25cdbb42ac78e9dd2a73af8eb57"><div class="ttname"><a href="_core_8hpp.html#ac647f25cdbb42ac78e9dd2a73af8eb57">Palo</a></div><div class="ttdeci">Palo</div><div class="ttdef"><b>Definition</b> Core.hpp:50</div></div>
+<div class="ttc" id="a_core_8hpp_html_ae5465f95bf0606cf5c572652bbfcbf15"><div class="ttname"><a href="_core_8hpp.html#ae5465f95bf0606cf5c572652bbfcbf15">PlayAgain</a></div><div class="ttdeci">void PlayAgain(gameData &amp;gD, carta deck[], Pantalla &amp;PantallaActual)</div><div class="ttdoc">Logica del reinicio del juego.</div><div class="ttdef"><b>Definition</b> Core.cpp:76</div></div>
+<div class="ttc" id="a_core_8hpp_html_aeac908305e56b9609b2af3301c9de0fb"><div class="ttname"><a href="_core_8hpp.html#aeac908305e56b9609b2af3301c9de0fb">PickCard</a></div><div class="ttdeci">void PickCard(gameData &amp;gD, carta deck[], Pantalla &amp;PantallaActual)</div><div class="ttdoc">Logica de la fase de toma de cartas.</div><div class="ttdef"><b>Definition</b> Core.cpp:85</div></div>
+<div class="ttc" id="a_core_8hpp_html_af201f4040fba2fe31e359ae6624d9347"><div class="ttname"><a href="_core_8hpp.html#af201f4040fba2fe31e359ae6624d9347">ResetGame</a></div><div class="ttdeci">void ResetGame(gameData &amp;gD, carta deck[], Pantalla &amp;PantallaActual)</div><div class="ttdoc">Reinicializa todo el juego.</div><div class="ttdef"><b>Definition</b> Core.cpp:55</div></div>
+<div class="ttc" id="a_core_8hpp_html_af471834a248a0f29149789d542267f20"><div class="ttname"><a href="_core_8hpp.html#af471834a248a0f29149789d542267f20">CreateDeck</a></div><div class="ttdeci">void CreateDeck(carta *deck)</div><div class="ttdoc">Creamos el mazo inicial.</div><div class="ttdef"><b>Definition</b> Core.cpp:112</div></div>
+<div class="ttc" id="astruct_vector2_html"><div class="ttname"><a href="struct_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition</b> raylib.h:215</div></div>
+<div class="ttc" id="astructcarta_html"><div class="ttname"><a href="structcarta.html">carta</a></div><div class="ttdoc">Estructura de una carta.</div><div class="ttdef"><b>Definition</b> Core.hpp:64</div></div>
+<div class="ttc" id="astructcarta_html_a521288ff360098414d5375772a8421e8"><div class="ttname"><a href="structcarta.html#a521288ff360098414d5375772a8421e8">carta::carta</a></div><div class="ttdeci">carta()</div><div class="ttdoc">Constructor de carta.</div><div class="ttdef"><b>Definition</b> JuegoBJ.cpp:152</div></div>
+<div class="ttc" id="astructcarta_html_a8947f87e0cd7c5fa51eacc085f397fbb"><div class="ttname"><a href="structcarta.html#a8947f87e0cd7c5fa51eacc085f397fbb">carta::denominacion</a></div><div class="ttdeci">int denominacion</div><div class="ttdef"><b>Definition</b> Core.hpp:66</div></div>
+<div class="ttc" id="astructcarta_html_aa74527a432f699333753c08bc72202d4"><div class="ttname"><a href="structcarta.html#aa74527a432f699333753c08bc72202d4">carta::isSelected</a></div><div class="ttdeci">bool isSelected</div><div class="ttdef"><b>Definition</b> Core.hpp:68</div></div>
+<div class="ttc" id="astructcarta_html_af5ae61a9c0cf19113942b12962a14030"><div class="ttname"><a href="structcarta.html#af5ae61a9c0cf19113942b12962a14030">carta::pos</a></div><div class="ttdeci">Vector2 pos</div><div class="ttdef"><b>Definition</b> Core.hpp:67</div></div>
+<div class="ttc" id="astructgame_data_html"><div class="ttname"><a href="structgame_data.html">gameData</a></div><div class="ttdoc">Estructura principal del juego. Contiene todas las variables que se deben de seguir para comunicarse ...</div><div class="ttdef"><b>Definition</b> Core.hpp:23</div></div>
+<div class="ttc" id="astructgame_data_html_a0562acddd5ebe59573ff7d6eb8f6654d"><div class="ttname"><a href="structgame_data.html#a0562acddd5ebe59573ff7d6eb8f6654d">gameData::selection</a></div><div class="ttdeci">short selection</div><div class="ttdef"><b>Definition</b> Core.hpp:30</div></div>
+<div class="ttc" id="astructgame_data_html_a1cbcebe8d79d069615ea02ddb31f8793"><div class="ttname"><a href="structgame_data.html#a1cbcebe8d79d069615ea02ddb31f8793">gameData::exitWindow</a></div><div class="ttdeci">bool exitWindow</div><div class="ttdef"><b>Definition</b> Core.hpp:27</div></div>
+<div class="ttc" id="astructgame_data_html_a28cbf2eb686cd516d5f932647e7e2083"><div class="ttname"><a href="structgame_data.html#a28cbf2eb686cd516d5f932647e7e2083">gameData::gameOutcome</a></div><div class="ttdeci">int gameOutcome</div><div class="ttdef"><b>Definition</b> Core.hpp:26</div></div>
+<div class="ttc" id="astructgame_data_html_a384f6ced90fe7c93cdfbd1d2cab97221"><div class="ttname"><a href="structgame_data.html#a384f6ced90fe7c93cdfbd1d2cab97221">gameData::cardsPlayer</a></div><div class="ttdeci">int cardsPlayer[26]</div><div class="ttdef"><b>Definition</b> Core.hpp:31</div></div>
+<div class="ttc" id="astructgame_data_html_a4002119736ede9a1d97017a90b7de01c"><div class="ttname"><a href="structgame_data.html#a4002119736ede9a1d97017a90b7de01c">gameData::sumCPU</a></div><div class="ttdeci">int sumCPU</div><div class="ttdef"><b>Definition</b> Core.hpp:25</div></div>
+<div class="ttc" id="astructgame_data_html_a51a94b0b34538f97f0316a9bdcc55200"><div class="ttname"><a href="structgame_data.html#a51a94b0b34538f97f0316a9bdcc55200">gameData::gameData</a></div><div class="ttdeci">gameData()</div><div class="ttdoc">Constructor de los datos del juego.</div><div class="ttdef"><b>Definition</b> Core.cpp:127</div></div>
+<div class="ttc" id="astructgame_data_html_a5520f307db3c182f423723c56ea24ca4"><div class="ttname"><a href="structgame_data.html#a5520f307db3c182f423723c56ea24ca4">gameData::selectionPause</a></div><div class="ttdeci">int selectionPause</div><div class="ttdef"><b>Definition</b> Core.hpp:29</div></div>
+<div class="ttc" id="astructgame_data_html_a74f897d5f611f94ca7f2306cc60a7b65"><div class="ttname"><a href="structgame_data.html#a74f897d5f611f94ca7f2306cc60a7b65">gameData::blackjackOcurred</a></div><div class="ttdeci">bool blackjackOcurred</div><div class="ttdef"><b>Definition</b> Core.hpp:35</div></div>
+<div class="ttc" id="astructgame_data_html_ab8197df0507a461cb1904860a30f6211"><div class="ttname"><a href="structgame_data.html#ab8197df0507a461cb1904860a30f6211">gameData::cpu_cards_count</a></div><div class="ttdeci">int cpu_cards_count</div><div class="ttdef"><b>Definition</b> Core.hpp:34</div></div>
+<div class="ttc" id="astructgame_data_html_ab8d8afce1df37da9d39d501114d713ea"><div class="ttname"><a href="structgame_data.html#ab8d8afce1df37da9d39d501114d713ea">gameData::selectionGame</a></div><div class="ttdeci">int selectionGame</div><div class="ttdef"><b>Definition</b> Core.hpp:36</div></div>
+<div class="ttc" id="astructgame_data_html_ac50d8c6048151db6ab78a4b94711009c"><div class="ttname"><a href="structgame_data.html#ac50d8c6048151db6ab78a4b94711009c">gameData::isHold</a></div><div class="ttdeci">bool isHold</div><div class="ttdef"><b>Definition</b> Core.hpp:38</div></div>
+<div class="ttc" id="astructgame_data_html_ad7396c2f5d5e7338cc8b18691876ab1b"><div class="ttname"><a href="structgame_data.html#ad7396c2f5d5e7338cc8b18691876ab1b">gameData::cardsCPU</a></div><div class="ttdeci">int cardsCPU[26]</div><div class="ttdef"><b>Definition</b> Core.hpp:32</div></div>
+<div class="ttc" id="astructgame_data_html_ae4f481c999a04a9d4636c73493ebccfc"><div class="ttname"><a href="structgame_data.html#ae4f481c999a04a9d4636c73493ebccfc">gameData::isHit</a></div><div class="ttdeci">bool isHit</div><div class="ttdef"><b>Definition</b> Core.hpp:37</div></div>
+<div class="ttc" id="astructgame_data_html_af05564249f02667ab41bf2349db8476e"><div class="ttname"><a href="structgame_data.html#af05564249f02667ab41bf2349db8476e">gameData::player_cards_count</a></div><div class="ttdeci">int player_cards_count</div><div class="ttdef"><b>Definition</b> Core.hpp:33</div></div>
+<div class="ttc" id="astructgame_data_html_af72abe6e757f6ec930951ab83efea25d"><div class="ttname"><a href="structgame_data.html#af72abe6e757f6ec930951ab83efea25d">gameData::exitWindowRequested</a></div><div class="ttdeci">bool exitWindowRequested</div><div class="ttdef"><b>Definition</b> Core.hpp:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_core_8hpp.html">Core.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

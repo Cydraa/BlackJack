@@ -1,5 +1,8 @@
 #pragma once
 
+/** @file
+*/
+
 #include "Core.hpp"
 #include <cstdlib> // Para rand, srand
 #include <ctime>   // Para time

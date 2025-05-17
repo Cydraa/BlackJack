@@ -1,0 +1,710 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BLACKJACK: Callbacks</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BLACKJACK
+   </div>
+   <div id="projectbrief">Este programa es un juego de blackjack simple de un solo jugador.</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('group___callbacks.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">typedefs</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Callbacks</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:gaee0b1849b0a801545113b5fa76272bf4" id="r_gaee0b1849b0a801545113b5fa76272bf4"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaee0b1849b0a801545113b5fa76272bf4">RGFW_windowmovefunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, <a class="el" href="struct_r_g_f_w__rect.html">RGFW_rect</a> r)</td></tr>
+<tr class="separator:gaee0b1849b0a801545113b5fa76272bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6a2c06bb7288d94ea3d8f053fe292f2" id="r_gab6a2c06bb7288d94ea3d8f053fe292f2"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, <a class="el" href="struct_r_g_f_w__rect.html">RGFW_rect</a> r)</td></tr>
+<tr class="separator:gab6a2c06bb7288d94ea3d8f053fe292f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18ae56dfa334dde3f7532077093c9691" id="r_ga18ae56dfa334dde3f7532077093c9691"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga18ae56dfa334dde3f7532077093c9691">RGFW_windowquitfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win)</td></tr>
+<tr class="separator:ga18ae56dfa334dde3f7532077093c9691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe9f1d3cf2f1a29fb5877f2fd4587d0b" id="r_gabe9f1d3cf2f1a29fb5877f2fd4587d0b"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabe9f1d3cf2f1a29fb5877f2fd4587d0b">RGFW_focusfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, RGFW_bool inFocus)</td></tr>
+<tr class="separator:gabe9f1d3cf2f1a29fb5877f2fd4587d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4ccf80df67a6601f6a1c025ab69705f" id="r_gaa4ccf80df67a6601f6a1c025ab69705f"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa4ccf80df67a6601f6a1c025ab69705f">RGFW_mouseNotifyfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, <a class="el" href="struct_r_g_f_w__point.html">RGFW_point</a> point, RGFW_bool status)</td></tr>
+<tr class="separator:gaa4ccf80df67a6601f6a1c025ab69705f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae3561822a8b0f1f263294e92703e6ebb" id="r_gae3561822a8b0f1f263294e92703e6ebb"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae3561822a8b0f1f263294e92703e6ebb">RGFW_mouseposfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, <a class="el" href="struct_r_g_f_w__point.html">RGFW_point</a> point, <a class="el" href="struct_r_g_f_w__point.html">RGFW_point</a> vector)</td></tr>
+<tr class="separator:gae3561822a8b0f1f263294e92703e6ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f23d16fc1842746e340f74ce5297238" id="r_ga0f23d16fc1842746e340f74ce5297238"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0f23d16fc1842746e340f74ce5297238">RGFW_dndInitfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, <a class="el" href="struct_r_g_f_w__point.html">RGFW_point</a> point)</td></tr>
+<tr class="separator:ga0f23d16fc1842746e340f74ce5297238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga549ca7f50706b597bc36152bde169a9e" id="r_ga549ca7f50706b597bc36152bde169a9e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga549ca7f50706b597bc36152bde169a9e">RGFW_windowrefreshfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win)</td></tr>
+<tr class="separator:ga549ca7f50706b597bc36152bde169a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac106d1af2e82c4c01892f73d6a5a3822" id="r_gac106d1af2e82c4c01892f73d6a5a3822"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac106d1af2e82c4c01892f73d6a5a3822">RGFW_keyfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, u8 key, char keyChar, RGFW_keymod keyMod, RGFW_bool pressed)</td></tr>
+<tr class="separator:gac106d1af2e82c4c01892f73d6a5a3822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga917e6f8679dc635c26aeff6e2b2f24e3" id="r_ga917e6f8679dc635c26aeff6e2b2f24e3"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga917e6f8679dc635c26aeff6e2b2f24e3">RGFW_mousebuttonfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, RGFW_mouseButton button, double scroll, RGFW_bool pressed)</td></tr>
+<tr class="separator:ga917e6f8679dc635c26aeff6e2b2f24e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e9294f6b00a721fb629e0b19c7dd1dc" id="r_ga6e9294f6b00a721fb629e0b19c7dd1dc"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6e9294f6b00a721fb629e0b19c7dd1dc">RGFW_gamepadButtonfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, u16 gamepad, u8 button, RGFW_bool pressed)</td></tr>
+<tr class="separator:ga6e9294f6b00a721fb629e0b19c7dd1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac41270036ec7e6a1fe13f5195ffac620" id="r_gac41270036ec7e6a1fe13f5195ffac620"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac41270036ec7e6a1fe13f5195ffac620">RGFW_gamepadAxisfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, u16 gamepad, <a class="el" href="struct_r_g_f_w__point.html">RGFW_point</a> axis[2], u8 axisesCount, u8 whichAxis)</td></tr>
+<tr class="separator:gac41270036ec7e6a1fe13f5195ffac620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec930946481b1a8c71788c19b6bf3674" id="r_gaec930946481b1a8c71788c19b6bf3674"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaec930946481b1a8c71788c19b6bf3674">RGFW_gamepadfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, u16 gamepad, RGFW_bool connected)</td></tr>
+<tr class="separator:gaec930946481b1a8c71788c19b6bf3674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga434cff4c15dd2839a1e65f55c1d21188" id="r_ga434cff4c15dd2839a1e65f55c1d21188"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga434cff4c15dd2839a1e65f55c1d21188">RGFW_dndfunc</a>) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, char **droppedFiles, u32 droppedFilesCount)</td></tr>
+<tr class="separator:ga434cff4c15dd2839a1e65f55c1d21188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:gac036b935b39bfabb6ac8e228fab07c9d" id="r_gac036b935b39bfabb6ac8e228fab07c9d"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gaee0b1849b0a801545113b5fa76272bf4">RGFW_windowmovefunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac036b935b39bfabb6ac8e228fab07c9d">RGFW_setWindowMoveCallback</a> (<a class="el" href="#gaee0b1849b0a801545113b5fa76272bf4">RGFW_windowmovefunc</a> func)</td></tr>
+<tr class="separator:gac036b935b39bfabb6ac8e228fab07c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d9746d3f312096a508954472d244ffe" id="r_ga6d9746d3f312096a508954472d244ffe"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6d9746d3f312096a508954472d244ffe">RGFW_setWindowResizeCallback</a> (<a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a> func)</td></tr>
+<tr class="separator:ga6d9746d3f312096a508954472d244ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b7d3fe9c513efb0bc173f9f8fd56b05" id="r_ga9b7d3fe9c513efb0bc173f9f8fd56b05"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#ga18ae56dfa334dde3f7532077093c9691">RGFW_windowquitfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9b7d3fe9c513efb0bc173f9f8fd56b05">RGFW_setWindowQuitCallback</a> (<a class="el" href="#ga18ae56dfa334dde3f7532077093c9691">RGFW_windowquitfunc</a> func)</td></tr>
+<tr class="separator:ga9b7d3fe9c513efb0bc173f9f8fd56b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ec534a37fbff0a98f466c4bc0de6b6a" id="r_ga9ec534a37fbff0a98f466c4bc0de6b6a"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gae3561822a8b0f1f263294e92703e6ebb">RGFW_mouseposfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9ec534a37fbff0a98f466c4bc0de6b6a">RGFW_setMousePosCallback</a> (<a class="el" href="#gae3561822a8b0f1f263294e92703e6ebb">RGFW_mouseposfunc</a> func)</td></tr>
+<tr class="separator:ga9ec534a37fbff0a98f466c4bc0de6b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga305e1673f4a91264aba268ab518433ba" id="r_ga305e1673f4a91264aba268ab518433ba"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#ga549ca7f50706b597bc36152bde169a9e">RGFW_windowrefreshfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga305e1673f4a91264aba268ab518433ba">RGFW_setWindowRefreshCallback</a> (<a class="el" href="#ga549ca7f50706b597bc36152bde169a9e">RGFW_windowrefreshfunc</a> func)</td></tr>
+<tr class="separator:ga305e1673f4a91264aba268ab518433ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b5846ac7b74848a4170770197f9235e" id="r_ga8b5846ac7b74848a4170770197f9235e"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gabe9f1d3cf2f1a29fb5877f2fd4587d0b">RGFW_focusfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8b5846ac7b74848a4170770197f9235e">RGFW_setFocusCallback</a> (<a class="el" href="#gabe9f1d3cf2f1a29fb5877f2fd4587d0b">RGFW_focusfunc</a> func)</td></tr>
+<tr class="separator:ga8b5846ac7b74848a4170770197f9235e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga731449e179227cbc88f1e1be8dd74d43" id="r_ga731449e179227cbc88f1e1be8dd74d43"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gaa4ccf80df67a6601f6a1c025ab69705f">RGFW_mouseNotifyfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga731449e179227cbc88f1e1be8dd74d43">RGFW_setMouseNotifyCallBack</a> (<a class="el" href="#gaa4ccf80df67a6601f6a1c025ab69705f">RGFW_mouseNotifyfunc</a> func)</td></tr>
+<tr class="separator:ga731449e179227cbc88f1e1be8dd74d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e81369ffe03b5775a26bb01969a7649" id="r_ga1e81369ffe03b5775a26bb01969a7649"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#ga434cff4c15dd2839a1e65f55c1d21188">RGFW_dndfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1e81369ffe03b5775a26bb01969a7649">RGFW_setDndCallback</a> (<a class="el" href="#ga434cff4c15dd2839a1e65f55c1d21188">RGFW_dndfunc</a> func)</td></tr>
+<tr class="separator:ga1e81369ffe03b5775a26bb01969a7649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a54548833f8cca9b94b23f6e37ba3b3" id="r_ga8a54548833f8cca9b94b23f6e37ba3b3"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#ga0f23d16fc1842746e340f74ce5297238">RGFW_dndInitfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8a54548833f8cca9b94b23f6e37ba3b3">RGFW_setDndInitCallback</a> (<a class="el" href="#ga0f23d16fc1842746e340f74ce5297238">RGFW_dndInitfunc</a> func)</td></tr>
+<tr class="separator:ga8a54548833f8cca9b94b23f6e37ba3b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaade2b5b8ca4d3e0d3e3fe219ff9e2795" id="r_gaade2b5b8ca4d3e0d3e3fe219ff9e2795"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gac106d1af2e82c4c01892f73d6a5a3822">RGFW_keyfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaade2b5b8ca4d3e0d3e3fe219ff9e2795">RGFW_setKeyCallback</a> (<a class="el" href="#gac106d1af2e82c4c01892f73d6a5a3822">RGFW_keyfunc</a> func)</td></tr>
+<tr class="separator:gaade2b5b8ca4d3e0d3e3fe219ff9e2795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6bf38c7b6a245f81262c3d81b8db083e" id="r_ga6bf38c7b6a245f81262c3d81b8db083e"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#ga917e6f8679dc635c26aeff6e2b2f24e3">RGFW_mousebuttonfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6bf38c7b6a245f81262c3d81b8db083e">RGFW_setMouseButtonCallback</a> (<a class="el" href="#ga917e6f8679dc635c26aeff6e2b2f24e3">RGFW_mousebuttonfunc</a> func)</td></tr>
+<tr class="separator:ga6bf38c7b6a245f81262c3d81b8db083e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18fbed5f52be6d1cc1c2a3e3496103cb" id="r_ga18fbed5f52be6d1cc1c2a3e3496103cb"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#ga6e9294f6b00a721fb629e0b19c7dd1dc">RGFW_gamepadButtonfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga18fbed5f52be6d1cc1c2a3e3496103cb">RGFW_setgamepadButtonCallback</a> (<a class="el" href="#ga6e9294f6b00a721fb629e0b19c7dd1dc">RGFW_gamepadButtonfunc</a> func)</td></tr>
+<tr class="separator:ga18fbed5f52be6d1cc1c2a3e3496103cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b39a2db76ce3782f31d673698c4d53a" id="r_ga7b39a2db76ce3782f31d673698c4d53a"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gac41270036ec7e6a1fe13f5195ffac620">RGFW_gamepadAxisfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7b39a2db76ce3782f31d673698c4d53a">RGFW_setgamepadAxisCallback</a> (<a class="el" href="#gac41270036ec7e6a1fe13f5195ffac620">RGFW_gamepadAxisfunc</a> func)</td></tr>
+<tr class="separator:ga7b39a2db76ce3782f31d673698c4d53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9029c047eda4df00906fe406e379c219" id="r_ga9029c047eda4df00906fe406e379c219"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gaec930946481b1a8c71788c19b6bf3674">RGFW_gamepadfunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9029c047eda4df00906fe406e379c219">RGFW_setGamepadCallback</a> (<a class="el" href="#gaec930946481b1a8c71788c19b6bf3674">RGFW_gamepadfunc</a> func)</td></tr>
+<tr class="separator:ga9029c047eda4df00906fe406e379c219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5cc2a183f3cd057b5c7e6b8d86e2b40" id="r_gab5cc2a183f3cd057b5c7e6b8d86e2b40"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab5cc2a183f3cd057b5c7e6b8d86e2b40">RGFW_setWindowMaximizedCallback</a> (<a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a> func)</td></tr>
+<tr class="separator:gab5cc2a183f3cd057b5c7e6b8d86e2b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9aa6ebd4b24fc85bfbb8776902904413" id="r_ga9aa6ebd4b24fc85bfbb8776902904413"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9aa6ebd4b24fc85bfbb8776902904413">RGFW_setWindowMinimizedCallback</a> (<a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a> func)</td></tr>
+<tr class="separator:ga9aa6ebd4b24fc85bfbb8776902904413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63550130742d2ca7e4fa4a28d61fcc2b" id="r_ga63550130742d2ca7e4fa4a28d61fcc2b"><td class="memItemLeft" align="right" valign="top">RGFWDEF <a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga63550130742d2ca7e4fa4a28d61fcc2b">RGFW_setWindowRestoredCallback</a> (<a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a> func)</td></tr>
+<tr class="separator:ga63550130742d2ca7e4fa4a28d61fcc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<p>event callbacks. These are completely optional, so you can use the normal RGFW_checkEvent() method if you prefer that </p>
+<h2 class="groupheader">Documentación de «typedef»</h2>
+<a id="ga434cff4c15dd2839a1e65f55c1d21188" name="ga434cff4c15dd2839a1e65f55c1d21188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga434cff4c15dd2839a1e65f55c1d21188">&#9670;&#160;</a></span>RGFW_dndfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_dndfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, char **droppedFiles, u32 droppedFilesCount)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_dnd, the window that had the drop, the drop data and the number of files dropped </p>
+
+</div>
+</div>
+<a id="ga0f23d16fc1842746e340f74ce5297238" name="ga0f23d16fc1842746e340f74ce5297238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f23d16fc1842746e340f74ce5297238">&#9670;&#160;</a></span>RGFW_dndInitfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_dndInitfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, <a class="el" href="struct_r_g_f_w__point.html">RGFW_point</a> point)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_DNDInit, the window, the point of the drop on the windows </p>
+
+</div>
+</div>
+<a id="gabe9f1d3cf2f1a29fb5877f2fd4587d0b" name="gabe9f1d3cf2f1a29fb5877f2fd4587d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe9f1d3cf2f1a29fb5877f2fd4587d0b">&#9670;&#160;</a></span>RGFW_focusfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_focusfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, RGFW_bool inFocus)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_focusIn / RGFW_focusOut, the window who's focus has changed and if its in focus </p>
+
+</div>
+</div>
+<a id="gac41270036ec7e6a1fe13f5195ffac620" name="gac41270036ec7e6a1fe13f5195ffac620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac41270036ec7e6a1fe13f5195ffac620">&#9670;&#160;</a></span>RGFW_gamepadAxisfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_gamepadAxisfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, u16 gamepad, <a class="el" href="struct_r_g_f_w__point.html">RGFW_point</a> axis[2], u8 axisesCount, u8 whichAxis)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_gamepadAxisMove, the window that got the event, the gamepad in question, the axis values and the axis count </p>
+
+</div>
+</div>
+<a id="ga6e9294f6b00a721fb629e0b19c7dd1dc" name="ga6e9294f6b00a721fb629e0b19c7dd1dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e9294f6b00a721fb629e0b19c7dd1dc">&#9670;&#160;</a></span>RGFW_gamepadButtonfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_gamepadButtonfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, u16 gamepad, u8 button, RGFW_bool pressed)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_gamepadButtonPressed, the window that got the event, the button that was pressed, the scroll value, if it was a press (else it's a release) </p>
+
+</div>
+</div>
+<a id="gaec930946481b1a8c71788c19b6bf3674" name="gaec930946481b1a8c71788c19b6bf3674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec930946481b1a8c71788c19b6bf3674">&#9670;&#160;</a></span>RGFW_gamepadfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_gamepadfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, u16 gamepad, RGFW_bool connected)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_gamepadConnected / RGFW_gamepadDisconnected, the window that got the event, the gamepad in question, if the controller was connected (else it was disconnected) </p>
+
+</div>
+</div>
+<a id="gac106d1af2e82c4c01892f73d6a5a3822" name="gac106d1af2e82c4c01892f73d6a5a3822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac106d1af2e82c4c01892f73d6a5a3822">&#9670;&#160;</a></span>RGFW_keyfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_keyfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, u8 key, char keyChar, RGFW_keymod keyMod, RGFW_bool pressed)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_keyPressed / RGFW_keyReleased, the window that got the event, the mapped key, the physical key, the string version, the state of the mod keys, if it was a press (else it's a release) </p>
+
+</div>
+</div>
+<a id="ga917e6f8679dc635c26aeff6e2b2f24e3" name="ga917e6f8679dc635c26aeff6e2b2f24e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga917e6f8679dc635c26aeff6e2b2f24e3">&#9670;&#160;</a></span>RGFW_mousebuttonfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_mousebuttonfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, RGFW_mouseButton button, double scroll, RGFW_bool pressed)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_mouseButtonPressed / RGFW_mouseButtonReleased, the window that got the event, the button that was pressed, the scroll value, if it was a press (else it's a release) </p>
+
+</div>
+</div>
+<a id="gaa4ccf80df67a6601f6a1c025ab69705f" name="gaa4ccf80df67a6601f6a1c025ab69705f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4ccf80df67a6601f6a1c025ab69705f">&#9670;&#160;</a></span>RGFW_mouseNotifyfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_mouseNotifyfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, <a class="el" href="struct_r_g_f_w__point.html">RGFW_point</a> point, RGFW_bool status)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_mouseEnter / RGFW_mouseLeave, the window that changed, the point of the mouse (enter only) and if the mouse has entered </p>
+
+</div>
+</div>
+<a id="gae3561822a8b0f1f263294e92703e6ebb" name="gae3561822a8b0f1f263294e92703e6ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae3561822a8b0f1f263294e92703e6ebb">&#9670;&#160;</a></span>RGFW_mouseposfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_mouseposfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, <a class="el" href="struct_r_g_f_w__point.html">RGFW_point</a> point, <a class="el" href="struct_r_g_f_w__point.html">RGFW_point</a> vector)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_mousePosChanged, the window that the move happened on, and the new point of the mouse </p>
+
+</div>
+</div>
+<a id="gaee0b1849b0a801545113b5fa76272bf4" name="gaee0b1849b0a801545113b5fa76272bf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee0b1849b0a801545113b5fa76272bf4">&#9670;&#160;</a></span>RGFW_windowmovefunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_windowmovefunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, <a class="el" href="struct_r_g_f_w__rect.html">RGFW_rect</a> r)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_windowMoved, the window and its new rect value </p>
+
+</div>
+</div>
+<a id="ga18ae56dfa334dde3f7532077093c9691" name="ga18ae56dfa334dde3f7532077093c9691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga18ae56dfa334dde3f7532077093c9691">&#9670;&#160;</a></span>RGFW_windowquitfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_windowquitfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_quit, the window that was closed </p>
+
+</div>
+</div>
+<a id="ga549ca7f50706b597bc36152bde169a9e" name="ga549ca7f50706b597bc36152bde169a9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga549ca7f50706b597bc36152bde169a9e">&#9670;&#160;</a></span>RGFW_windowrefreshfunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_windowrefreshfunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_windowRefresh, the window that needs to be refreshed </p>
+
+</div>
+</div>
+<a id="gab6a2c06bb7288d94ea3d8f053fe292f2" name="gab6a2c06bb7288d94ea3d8f053fe292f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6a2c06bb7288d94ea3d8f053fe292f2">&#9670;&#160;</a></span>RGFW_windowresizefunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* RGFW_windowresizefunc) (<a class="el" href="struct_r_g_f_w__window.html">RGFW_window</a> *win, <a class="el" href="struct_r_g_f_w__rect.html">RGFW_rect</a> r)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RGFW_windowResized, the window and its new rect value </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="ga1e81369ffe03b5775a26bb01969a7649" name="ga1e81369ffe03b5775a26bb01969a7649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e81369ffe03b5775a26bb01969a7649">&#9670;&#160;</a></span>RGFW_setDndCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#ga434cff4c15dd2839a1e65f55c1d21188">RGFW_dndfunc</a> RGFW_setDndCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga434cff4c15dd2839a1e65f55c1d21188">RGFW_dndfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a drop event event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga8a54548833f8cca9b94b23f6e37ba3b3" name="ga8a54548833f8cca9b94b23f6e37ba3b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a54548833f8cca9b94b23f6e37ba3b3">&#9670;&#160;</a></span>RGFW_setDndInitCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#ga0f23d16fc1842746e340f74ce5297238">RGFW_dndInitfunc</a> RGFW_setDndInitCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga0f23d16fc1842746e340f74ce5297238">RGFW_dndInitfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a start of a drop event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga8b5846ac7b74848a4170770197f9235e" name="ga8b5846ac7b74848a4170770197f9235e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b5846ac7b74848a4170770197f9235e">&#9670;&#160;</a></span>RGFW_setFocusCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gabe9f1d3cf2f1a29fb5877f2fd4587d0b">RGFW_focusfunc</a> RGFW_setFocusCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gabe9f1d3cf2f1a29fb5877f2fd4587d0b">RGFW_focusfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a window focus change event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga7b39a2db76ce3782f31d673698c4d53a" name="ga7b39a2db76ce3782f31d673698c4d53a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b39a2db76ce3782f31d673698c4d53a">&#9670;&#160;</a></span>RGFW_setgamepadAxisCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gac41270036ec7e6a1fe13f5195ffac620">RGFW_gamepadAxisfunc</a> RGFW_setgamepadAxisCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gac41270036ec7e6a1fe13f5195ffac620">RGFW_gamepadAxisfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a gamepad axis move event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga18fbed5f52be6d1cc1c2a3e3496103cb" name="ga18fbed5f52be6d1cc1c2a3e3496103cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga18fbed5f52be6d1cc1c2a3e3496103cb">&#9670;&#160;</a></span>RGFW_setgamepadButtonCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#ga6e9294f6b00a721fb629e0b19c7dd1dc">RGFW_gamepadButtonfunc</a> RGFW_setgamepadButtonCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga6e9294f6b00a721fb629e0b19c7dd1dc">RGFW_gamepadButtonfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a controller button (press / release) event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga9029c047eda4df00906fe406e379c219" name="ga9029c047eda4df00906fe406e379c219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9029c047eda4df00906fe406e379c219">&#9670;&#160;</a></span>RGFW_setGamepadCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gaec930946481b1a8c71788c19b6bf3674">RGFW_gamepadfunc</a> RGFW_setGamepadCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaec930946481b1a8c71788c19b6bf3674">RGFW_gamepadfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for when a controller is connected or disconnected. Returns the previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="gaade2b5b8ca4d3e0d3e3fe219ff9e2795" name="gaade2b5b8ca4d3e0d3e3fe219ff9e2795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaade2b5b8ca4d3e0d3e3fe219ff9e2795">&#9670;&#160;</a></span>RGFW_setKeyCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gac106d1af2e82c4c01892f73d6a5a3822">RGFW_keyfunc</a> RGFW_setKeyCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gac106d1af2e82c4c01892f73d6a5a3822">RGFW_keyfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a key (press / release) event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga6bf38c7b6a245f81262c3d81b8db083e" name="ga6bf38c7b6a245f81262c3d81b8db083e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6bf38c7b6a245f81262c3d81b8db083e">&#9670;&#160;</a></span>RGFW_setMouseButtonCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#ga917e6f8679dc635c26aeff6e2b2f24e3">RGFW_mousebuttonfunc</a> RGFW_setMouseButtonCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga917e6f8679dc635c26aeff6e2b2f24e3">RGFW_mousebuttonfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a mouse button (press / release) event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga731449e179227cbc88f1e1be8dd74d43" name="ga731449e179227cbc88f1e1be8dd74d43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga731449e179227cbc88f1e1be8dd74d43">&#9670;&#160;</a></span>RGFW_setMouseNotifyCallBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gaa4ccf80df67a6601f6a1c025ab69705f">RGFW_mouseNotifyfunc</a> RGFW_setMouseNotifyCallBack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaa4ccf80df67a6601f6a1c025ab69705f">RGFW_mouseNotifyfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a mouse notify event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga9ec534a37fbff0a98f466c4bc0de6b6a" name="ga9ec534a37fbff0a98f466c4bc0de6b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ec534a37fbff0a98f466c4bc0de6b6a">&#9670;&#160;</a></span>RGFW_setMousePosCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gae3561822a8b0f1f263294e92703e6ebb">RGFW_mouseposfunc</a> RGFW_setMousePosCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gae3561822a8b0f1f263294e92703e6ebb">RGFW_mouseposfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a mouse move event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="gab5cc2a183f3cd057b5c7e6b8d86e2b40" name="gab5cc2a183f3cd057b5c7e6b8d86e2b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5cc2a183f3cd057b5c7e6b8d86e2b40">&#9670;&#160;</a></span>RGFW_setWindowMaximizedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a> RGFW_setWindowMaximizedCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set call back for when window is maximized. Returns the previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga9aa6ebd4b24fc85bfbb8776902904413" name="ga9aa6ebd4b24fc85bfbb8776902904413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9aa6ebd4b24fc85bfbb8776902904413">&#9670;&#160;</a></span>RGFW_setWindowMinimizedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a> RGFW_setWindowMinimizedCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set call back for when window is minimized. Returns the previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="gac036b935b39bfabb6ac8e228fab07c9d" name="gac036b935b39bfabb6ac8e228fab07c9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac036b935b39bfabb6ac8e228fab07c9d">&#9670;&#160;</a></span>RGFW_setWindowMoveCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gaee0b1849b0a801545113b5fa76272bf4">RGFW_windowmovefunc</a> RGFW_setWindowMoveCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaee0b1849b0a801545113b5fa76272bf4">RGFW_windowmovefunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a window move event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga9b7d3fe9c513efb0bc173f9f8fd56b05" name="ga9b7d3fe9c513efb0bc173f9f8fd56b05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b7d3fe9c513efb0bc173f9f8fd56b05">&#9670;&#160;</a></span>RGFW_setWindowQuitCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#ga18ae56dfa334dde3f7532077093c9691">RGFW_windowquitfunc</a> RGFW_setWindowQuitCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga18ae56dfa334dde3f7532077093c9691">RGFW_windowquitfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a window quit event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga305e1673f4a91264aba268ab518433ba" name="ga305e1673f4a91264aba268ab518433ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga305e1673f4a91264aba268ab518433ba">&#9670;&#160;</a></span>RGFW_setWindowRefreshCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#ga549ca7f50706b597bc36152bde169a9e">RGFW_windowrefreshfunc</a> RGFW_setWindowRefreshCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga549ca7f50706b597bc36152bde169a9e">RGFW_windowrefreshfunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a window refresh event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga6d9746d3f312096a508954472d244ffe" name="ga6d9746d3f312096a508954472d244ffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d9746d3f312096a508954472d244ffe">&#9670;&#160;</a></span>RGFW_setWindowResizeCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a> RGFW_setWindowResizeCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set callback for a window resize event. Returns previous callback function (if it was set) </p>
+
+</div>
+</div>
+<a id="ga63550130742d2ca7e4fa4a28d61fcc2b" name="ga63550130742d2ca7e4fa4a28d61fcc2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga63550130742d2ca7e4fa4a28d61fcc2b">&#9670;&#160;</a></span>RGFW_setWindowRestoredCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RGFWDEF <a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a> RGFW_setWindowRestoredCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gab6a2c06bb7288d94ea3d8f053fe292f2">RGFW_windowresizefunc</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set call back for when window is restored. Returns the previous callback function (if it was set) </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BLACKJACK: Referencia del archivo C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/src/Core.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BLACKJACK
+   </div>
+   <div id="projectbrief">Este programa es un juego de blackjack simple de un solo jugador.</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_core_8hpp.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Clases</a> &#124;
+<a href="#define-members">defines</a> &#124;
+<a href="#typedef-members">typedefs</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Core.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;raylib.h&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+</div>
+<p><a href="_core_8hpp_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgame_data.html">gameData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura principal del juego. Contiene todas las variables que se deben de seguir para comunicarse entre funciones.  <a href="structgame_data.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcarta.html">carta</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura de una carta.  <a href="structcarta.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a69cc3a876e4218ba04991a00d9bec1ab" id="r_a69cc3a876e4218ba04991a00d9bec1ab"><td class="memItemLeft" align="right" valign="top"><a id="a69cc3a876e4218ba04991a00d9bec1ab" name="a69cc3a876e4218ba04991a00d9bec1ab"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MENU_MAX</b>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a69cc3a876e4218ba04991a00d9bec1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30dd5589ec762286c4a57ef9fcc5c02c" id="r_a30dd5589ec762286c4a57ef9fcc5c02c"><td class="memItemLeft" align="right" valign="top"><a id="a30dd5589ec762286c4a57ef9fcc5c02c" name="a30dd5589ec762286c4a57ef9fcc5c02c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VENTANA_ANCHO</b>&#160;&#160;&#160;1280</td></tr>
+<tr class="separator:a30dd5589ec762286c4a57ef9fcc5c02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4467897bbd46394ae4b4d00efa17ee2f" id="r_a4467897bbd46394ae4b4d00efa17ee2f"><td class="memItemLeft" align="right" valign="top"><a id="a4467897bbd46394ae4b4d00efa17ee2f" name="a4467897bbd46394ae4b4d00efa17ee2f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VENTANA_ALTO</b>&#160;&#160;&#160;800</td></tr>
+<tr class="separator:a4467897bbd46394ae4b4d00efa17ee2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64cfd5e29bce31f3aaa41c3b7692591d" id="r_a64cfd5e29bce31f3aaa41c3b7692591d"><td class="memItemLeft" align="right" valign="top"><a id="a64cfd5e29bce31f3aaa41c3b7692591d" name="a64cfd5e29bce31f3aaa41c3b7692591d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TEXTURE_COUNT</b>&#160;&#160;&#160;52</td></tr>
+<tr class="separator:a64cfd5e29bce31f3aaa41c3b7692591d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:afce85ae4850371fb16a385542c580fd7" id="r_afce85ae4850371fb16a385542c580fd7"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afce85ae4850371fb16a385542c580fd7">Pantalla</a></td></tr>
+<tr class="separator:afce85ae4850371fb16a385542c580fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a3379b2380d4dd55e6034b45463536f3c" id="r_a3379b2380d4dd55e6034b45463536f3c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a> { <br />
+&#160;&#160;<b>TITULO</b> = -1
+, <b>JUEGO</b>
+, <b>REGLAS</b>
+, <b>CREDITOS</b>
+, <br />
+&#160;&#160;<b>SALIR</b>
+, <b>RESET</b>
+, <b>PLAY_AGAIN</b>
+, <b>PICK_CARD</b>
+<br />
+ }</td></tr>
+<tr class="separator:a3379b2380d4dd55e6034b45463536f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac647f25cdbb42ac78e9dd2a73af8eb57" id="r_ac647f25cdbb42ac78e9dd2a73af8eb57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac647f25cdbb42ac78e9dd2a73af8eb57">Palo</a> { <br />
+&#160;&#160;<b>NULO_PALO</b> = 0
+, <b>CORAZON</b> = 1
+, <b>DIAMANTE</b>
+, <b>TREBOL</b>
+, <br />
+&#160;&#160;<b>PICA</b>
+<br />
+ }</td></tr>
+<tr class="separator:ac647f25cdbb42ac78e9dd2a73af8eb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51895b572f6326a7f2db364ea2fa886f" id="r_a51895b572f6326a7f2db364ea2fa886f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51895b572f6326a7f2db364ea2fa886f">Opciones</a> { <b>PEDIR</b> = 0
+, <b>PLANTARSE</b>
+ }</td></tr>
+<tr class="separator:a51895b572f6326a7f2db364ea2fa886f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ecc8805edac7c43e4083ba3af7ab4c" id="r_a67ecc8805edac7c43e4083ba3af7ab4c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67ecc8805edac7c43e4083ba3af7ab4c">Actores</a> { <b>DECK</b> = -1
+, <b>CPU</b>
+, <b>JUGADOR</b>
+ }</td></tr>
+<tr class="separator:a67ecc8805edac7c43e4083ba3af7ab4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafbbb0042a27bcf65d4e58f485a2ae69" id="r_aafbbb0042a27bcf65d4e58f485a2ae69"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafbbb0042a27bcf65d4e58f485a2ae69">Outcome</a> { <b>SIN_DECIDIR</b> = -1
+, <b>PERDIDA</b>
+, <b>VICTORIA</b>
+, <b>EMPATE</b>
+ }</td></tr>
+<tr class="separator:aafbbb0042a27bcf65d4e58f485a2ae69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aa8e428b6ed71c27373bc6a8aa0ae9332" id="r_aa8e428b6ed71c27373bc6a8aa0ae9332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8e428b6ed71c27373bc6a8aa0ae9332">PauseGame</a> (<a class="el" href="structgame_data.html">gameData</a> &amp;gD)</td></tr>
+<tr class="memdesc:aa8e428b6ed71c27373bc6a8aa0ae9332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pausa el juego.  <br /></td></tr>
+<tr class="separator:aa8e428b6ed71c27373bc6a8aa0ae9332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b9ef396d08a39718e11c794102be57" id="r_a04b9ef396d08a39718e11c794102be57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04b9ef396d08a39718e11c794102be57">LoadAllTextures</a> (<a class="el" href="struct_texture.html">Texture2D</a> textures[])</td></tr>
+<tr class="memdesc:a04b9ef396d08a39718e11c794102be57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga todas las texturas.  <br /></td></tr>
+<tr class="separator:a04b9ef396d08a39718e11c794102be57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708a63c603d94939e9f2a30243b88fb9" id="r_a708a63c603d94939e9f2a30243b88fb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a708a63c603d94939e9f2a30243b88fb9">UnloadAllTextures</a> (<a class="el" href="struct_texture.html">Texture2D</a> textures[])</td></tr>
+<tr class="memdesc:a708a63c603d94939e9f2a30243b88fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descarga todas las texturas.  <br /></td></tr>
+<tr class="separator:a708a63c603d94939e9f2a30243b88fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af201f4040fba2fe31e359ae6624d9347" id="r_af201f4040fba2fe31e359ae6624d9347"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af201f4040fba2fe31e359ae6624d9347">ResetGame</a> (<a class="el" href="structgame_data.html">gameData</a> &amp;gD, <a class="el" href="structcarta.html">carta</a> deck[], <a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a> &amp;PantallaActual)</td></tr>
+<tr class="memdesc:af201f4040fba2fe31e359ae6624d9347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinicializa todo el juego.  <br /></td></tr>
+<tr class="separator:af201f4040fba2fe31e359ae6624d9347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5465f95bf0606cf5c572652bbfcbf15" id="r_ae5465f95bf0606cf5c572652bbfcbf15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5465f95bf0606cf5c572652bbfcbf15">PlayAgain</a> (<a class="el" href="structgame_data.html">gameData</a> &amp;gD, <a class="el" href="structcarta.html">carta</a> deck[], <a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a> &amp;PantallaActual)</td></tr>
+<tr class="memdesc:ae5465f95bf0606cf5c572652bbfcbf15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logica del reinicio del juego.  <br /></td></tr>
+<tr class="separator:ae5465f95bf0606cf5c572652bbfcbf15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac908305e56b9609b2af3301c9de0fb" id="r_aeac908305e56b9609b2af3301c9de0fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeac908305e56b9609b2af3301c9de0fb">PickCard</a> (<a class="el" href="structgame_data.html">gameData</a> &amp;gD, <a class="el" href="structcarta.html">carta</a> deck[], <a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a> &amp;PantallaActual)</td></tr>
+<tr class="memdesc:aeac908305e56b9609b2af3301c9de0fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logica de la fase de toma de cartas.  <br /></td></tr>
+<tr class="separator:aeac908305e56b9609b2af3301c9de0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af471834a248a0f29149789d542267f20" id="r_af471834a248a0f29149789d542267f20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af471834a248a0f29149789d542267f20">CreateDeck</a> (<a class="el" href="structcarta.html">carta</a> *deck)</td></tr>
+<tr class="memdesc:af471834a248a0f29149789d542267f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creamos el mazo inicial.  <br /></td></tr>
+<tr class="separator:af471834a248a0f29149789d542267f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «typedef»</h2>
+<a id="afce85ae4850371fb16a385542c580fd7" name="afce85ae4850371fb16a385542c580fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce85ae4850371fb16a385542c580fd7">&#9670;&#160;</a></span>Pantalla</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a> <a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enumeracion de los estados del juego </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de enumeraciones</h2>
+<a id="a67ecc8805edac7c43e4083ba3af7ab4c" name="a67ecc8805edac7c43e4083ba3af7ab4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ecc8805edac7c43e4083ba3af7ab4c">&#9670;&#160;</a></span>Actores</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a67ecc8805edac7c43e4083ba3af7ab4c">Actores</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Jugadores el juego. Este enum sirve para determinar quien tiene la carta recien sacada. </p>
+
+</div>
+</div>
+<a id="a51895b572f6326a7f2db364ea2fa886f" name="a51895b572f6326a7f2db364ea2fa886f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51895b572f6326a7f2db364ea2fa886f">&#9670;&#160;</a></span>Opciones</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a51895b572f6326a7f2db364ea2fa886f">Opciones</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="#a51895b572f6326a7f2db364ea2fa886f">Opciones</a> del juego. </p>
+
+</div>
+</div>
+<a id="aafbbb0042a27bcf65d4e58f485a2ae69" name="aafbbb0042a27bcf65d4e58f485a2ae69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafbbb0042a27bcf65d4e58f485a2ae69">&#9670;&#160;</a></span>Outcome</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aafbbb0042a27bcf65d4e58f485a2ae69">Outcome</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Resultado del juego </p>
+
+</div>
+</div>
+<a id="ac647f25cdbb42ac78e9dd2a73af8eb57" name="ac647f25cdbb42ac78e9dd2a73af8eb57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac647f25cdbb42ac78e9dd2a73af8eb57">&#9670;&#160;</a></span>Palo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ac647f25cdbb42ac78e9dd2a73af8eb57">Palo</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Palos de cartas. NULO_PALO es para el espacios del arreglo de "mano" que aun no se usan. </p>
+
+</div>
+</div>
+<a id="a3379b2380d4dd55e6034b45463536f3c" name="a3379b2380d4dd55e6034b45463536f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3379b2380d4dd55e6034b45463536f3c">&#9670;&#160;</a></span>Pantalla</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enumeracion de los estados del juego </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="af471834a248a0f29149789d542267f20" name="af471834a248a0f29149789d542267f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af471834a248a0f29149789d542267f20">&#9670;&#160;</a></span>CreateDeck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CreateDeck </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcarta.html">carta</a> *</td>          <td class="paramname"><span class="paramname"><em>deck</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creamos el mazo inicial. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deck</td><td>Arreglo de cartas. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a04b9ef396d08a39718e11c794102be57" name="a04b9ef396d08a39718e11c794102be57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04b9ef396d08a39718e11c794102be57">&#9670;&#160;</a></span>LoadAllTextures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadAllTextures </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture2D</a></td>          <td class="paramname"><span class="paramname"><em>textures</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carga todas las texturas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textures</td><td>Arreglo de texturas. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa8e428b6ed71c27373bc6a8aa0ae9332" name="aa8e428b6ed71c27373bc6a8aa0ae9332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8e428b6ed71c27373bc6a8aa0ae9332">&#9670;&#160;</a></span>PauseGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PauseGame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame_data.html">gameData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>gD</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pausa el juego. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gD</td><td>Estructura de datos del juego. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeac908305e56b9609b2af3301c9de0fb" name="aeac908305e56b9609b2af3301c9de0fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeac908305e56b9609b2af3301c9de0fb">&#9670;&#160;</a></span>PickCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PickCard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame_data.html">gameData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>gD</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcarta.html">carta</a></td>          <td class="paramname"><span class="paramname"><em>deck</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>PantallaActual</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logica de la fase de toma de cartas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gD</td><td>Estructura de datos del juego. </td></tr>
+    <tr><td class="paramname">deck</td><td>Arreglo de cartas. </td></tr>
+    <tr><td class="paramname">PantallaActual</td><td>Estado del juego. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5465f95bf0606cf5c572652bbfcbf15" name="ae5465f95bf0606cf5c572652bbfcbf15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5465f95bf0606cf5c572652bbfcbf15">&#9670;&#160;</a></span>PlayAgain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayAgain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame_data.html">gameData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>gD</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcarta.html">carta</a></td>          <td class="paramname"><span class="paramname"><em>deck</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>PantallaActual</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logica del reinicio del juego. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gD</td><td>Estructura de datos del juego. </td></tr>
+    <tr><td class="paramname">deck</td><td>Arreglo de cartas. </td></tr>
+    <tr><td class="paramname">PantallaActual</td><td>Estado del juego. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af201f4040fba2fe31e359ae6624d9347" name="af201f4040fba2fe31e359ae6624d9347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af201f4040fba2fe31e359ae6624d9347">&#9670;&#160;</a></span>ResetGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResetGame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame_data.html">gameData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>gD</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcarta.html">carta</a></td>          <td class="paramname"><span class="paramname"><em>deck</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a3379b2380d4dd55e6034b45463536f3c">Pantalla</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>PantallaActual</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reinicializa todo el juego. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gD</td><td>Estructura de datos del juego. </td></tr>
+    <tr><td class="paramname">deck</td><td>Arreglo de cartas. </td></tr>
+    <tr><td class="paramname">PantallaActual</td><td>Estado del juego. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a708a63c603d94939e9f2a30243b88fb9" name="a708a63c603d94939e9f2a30243b88fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708a63c603d94939e9f2a30243b88fb9">&#9670;&#160;</a></span>UnloadAllTextures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnloadAllTextures </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture2D</a></td>          <td class="paramname"><span class="paramname"><em>textures</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Descarga todas las texturas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textures</td><td>Arreglo de texturas. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_core_8hpp.html">Core.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

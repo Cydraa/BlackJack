@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BLACKJACK: raylib roadmap</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BLACKJACK
+   </div>
+   <div id="projectbrief">Este programa es un juego de blackjack simple de un solo jugador.</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('md__c_1_2_users_2_gamer_house_2_documents_20___u_n_i_s_o_n_2_programacion_01_i_2_black_jack_2_bl5189378db87e995c456f69abcfb52619.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">raylib roadmap</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md69"></a></p>
+<p>Here is a wishlist with features and ideas to improve the library. Note that features listed here are usually long term improvements or just describe a route to follow for the library. There are also some additional places to look for raylib improvements and ideas:</p>
+<ul>
+<li><a href="https://github.com/raysan5/raylib/issues">GitHub Issues</a> has several open issues for possible improvements or bugs to fix.</li>
+<li><a href="https://github.com/raysan5/raylib/pulls">GitHub PRs</a> open with improvements to be reviewed.</li>
+<li><a href="https://github.com/raysan5/raylib/tree/master/src">raylib source code</a> has multiple <em>TODO</em> comments around code with pending things to review or improve.</li>
+<li>raylib wishlists discussions are open to everyone to ask for improvements, feel free to check and comment:<ul>
+<li><a href="https://github.com/raysan5/raylib/discussions/4660">raylib 6.0 wishlist</a></li>
+<li><a href="https://github.com/raysan5/raylib/discussions/2952">raylib 5.0 wishlist</a></li>
+<li><a href="https://github.com/raysan5/raylib/discussions/2272">raylib wishlist 2022</a></li>
+<li><a href="https://github.com/raysan5/raylib/discussions/1502">raylib wishlist 2021</a></li>
+</ul>
+</li>
+</ul>
+<p><em>Current version of raylib is complete and functional but there is always room for improvements.</em></p>
+<p><b>raylib 5.x</b></p><ul class="check">
+<li class="unchecked"><code>rcore</code>: Support additional platforms: iOS, consoles?</li>
+</ul>
+<ul class="check">
+<li class="unchecked"><code>rcore_web</code>: Avoid GLFW dependency, functionality can be directly implemented using emscripten SDK</li>
+</ul>
+<ul class="check">
+<li class="unchecked"><code>rlgl</code>: Review GLSL shaders naming conventions for consistency</li>
+</ul>
+<ul class="check">
+<li class="unchecked"><code>textures</code>: Improve compressed textures support, loading and saving</li>
+</ul>
+<ul class="check">
+<li class="unchecked"><code>rmodels</code>: Improve 3d objects loading, specially animations (obj, gltf)</li>
+</ul>
+<ul class="check">
+<li class="unchecked"><code>raudio</code>: Implement miniaudio high-level provided features</li>
+</ul>
+<ul class="check">
+<li class="unchecked"><code>examples</code>: Review all examples, add more and better code explanations</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Software renderer backend? Maybe using <code><a class="el" href="struct_image.html">Image</a></code> provided API</li>
+</ul>
+<p><b>raylib 4.x</b></p><ul class="check">
+<li class="checked">Split core module into separate platforms?</li>
+</ul>
+<ul class="check">
+<li class="checked">Redesign gestures system, improve touch inputs management</li>
+</ul>
+<ul class="check">
+<li class="checked">Redesign camera module (more flexible) (<a href="https://github.com/raysan5/raylib/issues/1143">#1143</a>, <a href="https://github.com/raysan5/raylib/discussions/2507">https://github.com/raysan5/raylib/discussions/2507</a>)</li>
+</ul>
+<ul class="check">
+<li class="checked">Better documentation and improved examples, reviewed webpage with examples complexity level</li>
+</ul>
+<ul class="check">
+<li class="checked">Focus on HTML5 (<a href="https://itch.io/jam/raylib-5k-gamejam">raylib 5k gamejam</a>) and embedded platforms (RPI and similar SOCs)</li>
+</ul>
+<ul class="check">
+<li class="checked">Additional support libraries: <a href="https://github.com/raysan5/raygui">raygui</a>, <a href="https://github.com/raysan5/rres">rres</a></li>
+</ul>
+<p><b>raylib 4.0</b></p><ul class="check">
+<li class="checked">Improved consistency and coherency in raylib API</li>
+</ul>
+<ul class="check">
+<li class="checked">Continuous Deployment using GitHub Actions</li>
+</ul>
+<ul class="check">
+<li class="checked">rlgl improvements for standalone usage (avoid raylib coupling)</li>
+</ul>
+<ul>
+<li>Basic CPU/GPU stats system (memory, draws, time...) (<a href="https://github.com/raysan5/raylib/issues/1295">#1295</a>) - <em>DISCARDED</em></li>
+<li>Software rendering backend (avoiding OpenGL) (<a href="https://github.com/raysan5/raylib/issues/1370">#1370</a>) - <em>DISCARDED</em></li>
+<li>Network module (UDP): <code>rnet</code> (<a href="https://github.com/raysan5/raylib/issues/753">#753</a>) - <em>DISCARDED</em> - Use <a href="https://github.com/nathhB/nbnet">nbnet</a>.</li>
+</ul>
+<p><b>raylib 3.0</b></p><ul class="check">
+<li class="checked">Custom memory allocators support</li>
+</ul>
+<ul class="check">
+<li class="checked">Global variables moved to global context</li>
+</ul>
+<ul class="check">
+<li class="checked">Optimize data structures for pass-by-value</li>
+</ul>
+<ul class="check">
+<li class="checked">Trace log messages redesign (<a href="https://github.com/raysan5/raylib/issues/1065">#1065</a>)</li>
+</ul>
+<ul class="check">
+<li class="checked">Continuous Integration using GitHub Actions</li>
+</ul>
+<p><b>raylib 2.5</b></p><ul class="check">
+<li class="checked">Support Animated models</li>
+</ul>
+<ul class="check">
+<li class="checked">Support glTF models file format</li>
+</ul>
+<ul class="check">
+<li class="checked">Unicode support on text drawing</li>
+</ul>
+<p><b>raylib 2.0</b></p><ul class="check">
+<li class="checked">Removed external dependencies (GLFW3 and OpenAL)</li>
+</ul>
+<ul class="check">
+<li class="checked">Support TCC compiler (32bit and 64bit)</li>
+</ul>
+<p><b>raylib 1.8</b></p><ul class="check">
+<li class="checked">Improved Materials system with PBR support</li>
+</ul>
+<ul class="check">
+<li class="checked">Procedural image generation functions (spot, gradient, noise...)</li>
+</ul>
+<ul class="check">
+<li class="checked">Procedural mesh generation functions (cube, sphere...)</li>
+</ul>
+<ul class="check">
+<li class="checked">Custom Android APK build pipeline (default Makefile)</li>
+</ul>
+<p><b>raylib 1.7</b></p><ul class="check">
+<li class="checked">Support configuration flags</li>
+</ul>
+<ul class="check">
+<li class="checked">Improved build system for Android</li>
+</ul>
+<ul class="check">
+<li class="checked">Gamepad support on HTML5</li>
+</ul>
+<p><b>raylib 1.6</b></p><ul class="check">
+<li class="checked">Lua scripting support (raylib Lua wrapper)</li>
+</ul>
+<ul class="check">
+<li class="checked">Redesigned audio module</li>
+</ul>
+<ul class="check">
+<li class="checked">Support FLAC file format</li>
+</ul>
+<p><b>raylib 1.5</b></p><ul class="check">
+<li class="checked">Support Oculus Rift CV1 and VR stereo rendering (simulator)</li>
+</ul>
+<ul class="check">
+<li class="checked">Redesign Shaders/Textures system -&gt; New Materials system</li>
+</ul>
+<ul class="check">
+<li class="checked">Support lighting: Omni, Directional and Spotlights</li>
+</ul>
+<ul class="check">
+<li class="checked">Redesign physics module (physac)</li>
+</ul>
+<ul class="check">
+<li class="checked">Chiptunes audio modules support</li>
+</ul>
+<p><b>raylib 1.4</b></p><ul class="check">
+<li class="checked">TTF fonts support (using stb_truetype)</li>
+</ul>
+<ul class="check">
+<li class="checked">Raycast system for 3D picking (including collisions detection)</li>
+</ul>
+<ul class="check">
+<li class="checked">Floyd-Steinberg dithering on 16bit image format conversion</li>
+</ul>
+<ul class="check">
+<li class="checked">Basic image manipulation functions (crop, resize, draw...)</li>
+</ul>
+<ul class="check">
+<li class="checked">Storage load/save data functionality</li>
+</ul>
+<ul class="check">
+<li class="checked">Add Physics module (physac)</li>
+</ul>
+<ul class="check">
+<li class="checked">Remove GLEW dependency -&gt; Replaced by GLAD</li>
+</ul>
+<ul class="check">
+<li class="checked">Redesign Raspberry PI inputs system</li>
+</ul>
+<ul class="check">
+<li class="checked">Redesign gestures module to be multiplatform</li>
+</ul>
+<ul class="check">
+<li class="checked">Module raymath as header-only and functions inline</li>
+</ul>
+<ul class="check">
+<li class="checked">Add Easings module (easings.h) </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

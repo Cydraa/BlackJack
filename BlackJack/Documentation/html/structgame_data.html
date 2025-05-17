@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BLACKJACK: Referencia de la estructura gameData</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BLACKJACK
+   </div>
+   <div id="projectbrief">Este programa es un juego de blackjack simple de un solo jugador.</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('structgame_data.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pub-attribs">Atributos públicos</a> &#124;
+<a href="structgame_data-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la estructura gameData</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Estructura principal del juego. Contiene todas las variables que se deben de seguir para comunicarse entre funciones.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_core_8hpp_source.html">Core.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a51a94b0b34538f97f0316a9bdcc55200" id="r_a51a94b0b34538f97f0316a9bdcc55200"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51a94b0b34538f97f0316a9bdcc55200">gameData</a> ()</td></tr>
+<tr class="memdesc:a51a94b0b34538f97f0316a9bdcc55200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de los datos del juego.  <br /></td></tr>
+<tr class="separator:a51a94b0b34538f97f0316a9bdcc55200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:a3df20d34156d52a7050797da67a4c366" id="r_a3df20d34156d52a7050797da67a4c366"><td class="memItemLeft" align="right" valign="top"><a id="a3df20d34156d52a7050797da67a4c366" name="a3df20d34156d52a7050797da67a4c366"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>sumPlayer</b></td></tr>
+<tr class="separator:a3df20d34156d52a7050797da67a4c366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4002119736ede9a1d97017a90b7de01c" id="r_a4002119736ede9a1d97017a90b7de01c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4002119736ede9a1d97017a90b7de01c">sumCPU</a></td></tr>
+<tr class="separator:a4002119736ede9a1d97017a90b7de01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28cbf2eb686cd516d5f932647e7e2083" id="r_a28cbf2eb686cd516d5f932647e7e2083"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28cbf2eb686cd516d5f932647e7e2083">gameOutcome</a></td></tr>
+<tr class="separator:a28cbf2eb686cd516d5f932647e7e2083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cbcebe8d79d069615ea02ddb31f8793" id="r_a1cbcebe8d79d069615ea02ddb31f8793"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cbcebe8d79d069615ea02ddb31f8793">exitWindow</a></td></tr>
+<tr class="separator:a1cbcebe8d79d069615ea02ddb31f8793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af72abe6e757f6ec930951ab83efea25d" id="r_af72abe6e757f6ec930951ab83efea25d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af72abe6e757f6ec930951ab83efea25d">exitWindowRequested</a></td></tr>
+<tr class="separator:af72abe6e757f6ec930951ab83efea25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5520f307db3c182f423723c56ea24ca4" id="r_a5520f307db3c182f423723c56ea24ca4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5520f307db3c182f423723c56ea24ca4">selectionPause</a></td></tr>
+<tr class="separator:a5520f307db3c182f423723c56ea24ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0562acddd5ebe59573ff7d6eb8f6654d" id="r_a0562acddd5ebe59573ff7d6eb8f6654d"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0562acddd5ebe59573ff7d6eb8f6654d">selection</a></td></tr>
+<tr class="separator:a0562acddd5ebe59573ff7d6eb8f6654d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a384f6ced90fe7c93cdfbd1d2cab97221" id="r_a384f6ced90fe7c93cdfbd1d2cab97221"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a384f6ced90fe7c93cdfbd1d2cab97221">cardsPlayer</a> [26] = {}</td></tr>
+<tr class="separator:a384f6ced90fe7c93cdfbd1d2cab97221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7396c2f5d5e7338cc8b18691876ab1b" id="r_ad7396c2f5d5e7338cc8b18691876ab1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7396c2f5d5e7338cc8b18691876ab1b">cardsCPU</a> [26] = {}</td></tr>
+<tr class="separator:ad7396c2f5d5e7338cc8b18691876ab1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af05564249f02667ab41bf2349db8476e" id="r_af05564249f02667ab41bf2349db8476e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af05564249f02667ab41bf2349db8476e">player_cards_count</a></td></tr>
+<tr class="separator:af05564249f02667ab41bf2349db8476e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8197df0507a461cb1904860a30f6211" id="r_ab8197df0507a461cb1904860a30f6211"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8197df0507a461cb1904860a30f6211">cpu_cards_count</a></td></tr>
+<tr class="separator:ab8197df0507a461cb1904860a30f6211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f897d5f611f94ca7f2306cc60a7b65" id="r_a74f897d5f611f94ca7f2306cc60a7b65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74f897d5f611f94ca7f2306cc60a7b65">blackjackOcurred</a></td></tr>
+<tr class="separator:a74f897d5f611f94ca7f2306cc60a7b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d8afce1df37da9d39d501114d713ea" id="r_ab8d8afce1df37da9d39d501114d713ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8d8afce1df37da9d39d501114d713ea">selectionGame</a></td></tr>
+<tr class="separator:ab8d8afce1df37da9d39d501114d713ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f481c999a04a9d4636c73493ebccfc" id="r_ae4f481c999a04a9d4636c73493ebccfc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4f481c999a04a9d4636c73493ebccfc">isHit</a></td></tr>
+<tr class="separator:ae4f481c999a04a9d4636c73493ebccfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50d8c6048151db6ab78a4b94711009c" id="r_ac50d8c6048151db6ab78a4b94711009c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac50d8c6048151db6ab78a4b94711009c">isHold</a></td></tr>
+<tr class="separator:ac50d8c6048151db6ab78a4b94711009c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Estructura principal del juego. Contiene todas las variables que se deben de seguir para comunicarse entre funciones. </p>
+</div><h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a51a94b0b34538f97f0316a9bdcc55200" name="a51a94b0b34538f97f0316a9bdcc55200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a94b0b34538f97f0316a9bdcc55200">&#9670;&#160;</a></span>gameData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gameData::gameData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de los datos del juego. </p>
+<p>Si se planto </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de datos miembro</h2>
+<a id="a74f897d5f611f94ca7f2306cc60a7b65" name="a74f897d5f611f94ca7f2306cc60a7b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f897d5f611f94ca7f2306cc60a7b65">&#9670;&#160;</a></span>blackjackOcurred</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gameData::blackjackOcurred</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Contador de cartas de la CPU para esta mano. </p>
+
+</div>
+</div>
+<a id="ad7396c2f5d5e7338cc8b18691876ab1b" name="ad7396c2f5d5e7338cc8b18691876ab1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7396c2f5d5e7338cc8b18691876ab1b">&#9670;&#160;</a></span>cardsCPU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gameData::cardsCPU[26] = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Guardamos el orden de la salida de las cartas para el jugador (indice del mazo) </p>
+
+</div>
+</div>
+<a id="a384f6ced90fe7c93cdfbd1d2cab97221" name="a384f6ced90fe7c93cdfbd1d2cab97221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384f6ced90fe7c93cdfbd1d2cab97221">&#9670;&#160;</a></span>cardsPlayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gameData::cardsPlayer[26] = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Menu seleccion para el menu principal </p>
+
+</div>
+</div>
+<a id="ab8197df0507a461cb1904860a30f6211" name="ab8197df0507a461cb1904860a30f6211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8197df0507a461cb1904860a30f6211">&#9670;&#160;</a></span>cpu_cards_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gameData::cpu_cards_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Contador de cartas del jugador para esta mano. </p>
+
+</div>
+</div>
+<a id="a1cbcebe8d79d069615ea02ddb31f8793" name="a1cbcebe8d79d069615ea02ddb31f8793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cbcebe8d79d069615ea02ddb31f8793">&#9670;&#160;</a></span>exitWindow</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gameData::exitWindow</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flag para indicar si el jugador gan� la mano (usado en la l�gica original). </p>
+
+</div>
+</div>
+<a id="af72abe6e757f6ec930951ab83efea25d" name="af72abe6e757f6ec930951ab83efea25d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af72abe6e757f6ec930951ab83efea25d">&#9670;&#160;</a></span>exitWindowRequested</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gameData::exitWindowRequested</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Salir del juego </p>
+
+</div>
+</div>
+<a id="a28cbf2eb686cd516d5f932647e7e2083" name="a28cbf2eb686cd516d5f932647e7e2083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28cbf2eb686cd516d5f932647e7e2083">&#9670;&#160;</a></span>gameOutcome</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gameData::gameOutcome</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Suma del CPU </p>
+
+</div>
+</div>
+<a id="ae4f481c999a04a9d4636c73493ebccfc" name="ae4f481c999a04a9d4636c73493ebccfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4f481c999a04a9d4636c73493ebccfc">&#9670;&#160;</a></span>isHit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gameData::isHit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Seleccion </p>
+
+</div>
+</div>
+<a id="ac50d8c6048151db6ab78a4b94711009c" name="ac50d8c6048151db6ab78a4b94711009c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50d8c6048151db6ab78a4b94711009c">&#9670;&#160;</a></span>isHold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gameData::isHold</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Si se pidio una carta </p>
+
+</div>
+</div>
+<a id="af05564249f02667ab41bf2349db8476e" name="af05564249f02667ab41bf2349db8476e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af05564249f02667ab41bf2349db8476e">&#9670;&#160;</a></span>player_cards_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gameData::player_cards_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Guardamos el orden de la salida de las cartas para el cpu (indice del mazo) </p>
+
+</div>
+</div>
+<a id="a0562acddd5ebe59573ff7d6eb8f6654d" name="a0562acddd5ebe59573ff7d6eb8f6654d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0562acddd5ebe59573ff7d6eb8f6654d">&#9670;&#160;</a></span>selection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short gameData::selection</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Menu de seleccion para la pausa </p>
+
+</div>
+</div>
+<a id="ab8d8afce1df37da9d39d501114d713ea" name="ab8d8afce1df37da9d39d501114d713ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8d8afce1df37da9d39d501114d713ea">&#9670;&#160;</a></span>selectionGame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gameData::selectionGame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Si ocurrio blackjack o no </p>
+
+</div>
+</div>
+<a id="a5520f307db3c182f423723c56ea24ca4" name="a5520f307db3c182f423723c56ea24ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5520f307db3c182f423723c56ea24ca4">&#9670;&#160;</a></span>selectionPause</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gameData::selectionPause</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Peticion de salida del juego, llama a la ventana de pausa </p>
+
+</div>
+</div>
+<a id="a4002119736ede9a1d97017a90b7de01c" name="a4002119736ede9a1d97017a90b7de01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4002119736ede9a1d97017a90b7de01c">&#9670;&#160;</a></span>sumCPU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gameData::sumCPU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Suma del jugador </p>
+
+</div>
+</div>
+<hr/>La documentación de esta estructura está generada de los siguientes archivos:<ul>
+<li>C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/src/<a class="el" href="_core_8hpp_source.html">Core.hpp</a></li>
+<li>C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/build/build_files/<b>Core.cpp</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structgame_data.html">gameData</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

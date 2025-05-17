@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['palo_0',['Palo',['../_core_8hpp.html#ac647f25cdbb42ac78e9dd2a73af8eb57',1,'Core.hpp']]],
+  ['pantalla_1',['Pantalla',['../_core_8hpp.html#a3379b2380d4dd55e6034b45463536f3c',1,'Pantalla:&#160;Core.hpp'],['../_core_8hpp.html#afce85ae4850371fb16a385542c580fd7',1,'Pantalla:&#160;Core.hpp']]],
+  ['par_5fshapes_5fmesh_5fs_2',['par_shapes_mesh_s',['../structpar__shapes__mesh__s.html',1,'']]],
+  ['pausegame_3',['PauseGame',['../_core_8hpp.html#aa8e428b6ed71c27373bc6a8aa0ae9332',1,'Core.cpp']]],
+  ['philosophy_4',['raylib philosophy',['../md__c_1_2_users_2_gamer_house_2_documents_20___u_n_i_s_o_n_2_programacion_01_i_2_black_jack_2_bl5c525d2fddcc4c372e29f8eb6280ff9e.html#autotoc_md5',1,'']]],
+  ['physh_5',['physH',['../struct_r_g_f_w__monitor.html#a9c3025aaf5b5f383d80a3516fca2a399',1,'RGFW_monitor']]],
+  ['pickcard_6',['PickCard',['../_core_8hpp.html#aeac908305e56b9609b2af3301c9de0fb',1,'Core.cpp']]],
+  ['pixelratio_7',['pixelRatio',['../struct_r_g_f_w__monitor.html#a6a1679c6f3fff5aa884603ae401a4437',1,'RGFW_monitor']]],
+  ['pixels_8',['pixels',['../struct_g_l_f_wimage.html#a0c532a5c2bb715555279b7817daba0fb',1,'GLFWimage']]],
+  ['platformdata_9',['PlatformData',['../struct_platform_data.html',1,'']]],
+  ['platforms_10',['Supported Platforms',['../C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/README.md#autotoc_md73',1,'']]],
+  ['platforms_11',['platforms',['../C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/build/external/raylib-master/README.md#autotoc_md63',1,'Installing and building raylib on multiple platforms'],['../C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/README.md#autotoc_md75',1,'VSCode Users (all platforms)']]],
+  ['platforms_20are_20supported_20by_20raylib_12',['What platforms are supported by raylib?',['../md__c_1_2_users_2_gamer_house_2_documents_20___u_n_i_s_o_n_2_programacion_01_i_2_black_jack_2_bl5ed7e5edc19b68ff8dd4eb93cdd545f8.html#autotoc_md22',1,'']]],
+  ['playagain_13',['PlayAgain',['../_core_8hpp.html#ae5465f95bf0606cf5c572652bbfcbf15',1,'Core.cpp']]],
+  ['player_5fcards_5fcount_14',['player_cards_count',['../structgame_data.html#af05564249f02667ab41bf2349db8476e',1,'gameData']]],
+  ['point_15',['Point',['../struct_point.html',1,'']]],
+  ['point_16',['point',['../struct_r_g_f_w__event.html#aba9e0d0df62210352604aedbb5829c11',1,'RGFW_event']]],
+  ['pos_17',['pos',['../structcarta.html#af5ae61a9c0cf19113942b12962a14030',1,'carta']]],
+  ['probedpage_18',['ProbedPage',['../struct_probed_page.html',1,'']]],
+  ['programming_20languages_20can_20i_20use_20with_20raylib_19',['What programming languages can I use with raylib?',['../md__c_1_2_users_2_gamer_house_2_documents_20___u_n_i_s_o_n_2_programacion_01_i_2_black_jack_2_bl5ed7e5edc19b68ff8dd4eb93cdd545f8.html#autotoc_md23',1,'']]],
+  ['projects_20',['Naming projects',['../C:/Users/GamerHouse/Documents/0_UNISON/Programacion I/BlackJack/BlackJack/README.md#autotoc_md74',1,'']]],
+  ['provide_20that_20other_20engines_20or_20libraries_20don_20t_21',['What does raylib provide that other engines or libraries don&apos;t?',['../md__c_1_2_users_2_gamer_house_2_documents_20___u_n_i_s_o_n_2_programacion_01_i_2_black_jack_2_bl5ed7e5edc19b68ff8dd4eb93cdd545f8.html#autotoc_md26',1,'']]],
+  ['pull_20request_22',['Sending a Pull-Request',['../md__c_1_2_users_2_gamer_house_2_documents_20___u_n_i_s_o_n_2_programacion_01_i_2_black_jack_2_bl5c525d2fddcc4c372e29f8eb6280ff9e.html#autotoc_md9',1,'']]]
+];
