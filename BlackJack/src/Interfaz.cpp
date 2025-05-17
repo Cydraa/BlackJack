@@ -60,7 +60,7 @@ void RenderTitulo(gameData &gD)
 		botonesMenu[i].pos.y = 180 + 90 * (i + 1);
 
 
-		if (gD.seleccion == i) botonesMenu[i].colorBoton = RED;
+		if (gD.selection == i) botonesMenu[i].colorBoton = RED;
 
 		DibujarBoton(botonesMenu[i]);
 	}
@@ -95,7 +95,7 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 	const int menuMax = 2;
 	char* menu[menuMax] = { "Pedir", "Plantarse"};
 	Boton botonesMenu[menuMax];
-	Notificacion notif;
+	//Notificacion notif;
 
 	//Titulo
 	const char* titulo = { "BLACKJACK" };
@@ -110,86 +110,40 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 	DrawText(msg, 100, 440, 40, RAYWHITE);
 
 	//Dibujamos la baraja
-	int offSetX(0);
-	for (int i = 0; i < 52-gD.player_cards_count-gD.cpu_cards_count; ++i)
+	for (int i = 0; i < 52 - gD.player_cards_count - gD.cpu_cards_count; ++i)
 	{
-		deck[i].pos.x = posXDeck;
-		deck[i].pos.y = posYDeck;
+		Vector2 pos;
+		pos.x = posXDeck;
+		pos.y = posYDeck;
 
-		DrawTextureEx(cardTextures[52], deck[i].pos, 0, 0.45, WHITE);
+		DrawTextureEx(cardTextures[52], pos, 0, 0.45, WHITE);
 	}
 
 	//Dibujamos las cartas activas dependiendo de quien las haya tomado
-	int index;
+	int offsetX = 125.0f;
+	int offsetY = 500;
 	for (int i = 0; i < gD.player_cards_count; ++i)
 	{
-		index = gD.cartasJugador[i];
+		int index = gD.cardsPlayer[i];
 
-		if (i != 0) deck[i].pos.x = deck[i - 1].pos.x + 20;
+		//if (i != 0) deck[i].pos.x = deck[i - 1].pos.x + 20;
+		deck[index].pos.x = 150.0f + offsetX * i;
+		deck[index].pos.y = offsetY;
 
 		DrawTextureEx(cardTextures[index], deck[index].pos, 0, 0.45, WHITE);
 	}
 
+	offsetY = 175;
 	for (int i = 0; i < gD.cpu_cards_count; ++i)
 	{
-		index = gD.cartasCPU[i];
+		int index = gD.cardsCPU[i];
 
-		if (i != 0) deck[i].pos.x = deck[i - 1].pos.x + 20;
+		//if (i != 0) deck[i].pos.x = deck[i - 1].pos.x + 20;
+		deck[index].pos.x = 150.0f + offsetX * i;
+		deck[index].pos.y = offsetY;
 
 		DrawTextureEx(cardTextures[index], deck[index].pos, 0, 0.45, WHITE);
 	}
-
-	//Dibujamos la notificacion dependiendo del resultado del juego
-	switch (gD.gameOutcome)
-	{
-		case EMPATE:
-		{
-			notif.titulo = "EMPATE";
-			
-			if (gD.blackjackOcurred) notif.texto = "Ambos han empatado con un blackjack!\nPresiona ENTER para continuar...";
-			else notif.texto = "Ha ocurrido un empate!\nPresiona ENTER para continuar...";
-			DibujarNotificacion(notif);
-			break;
-		}
-		case VICTORIA:
-		{
-			notif.titulo = "VICTORIA";
-
-			if (gD.blackjackOcurred) notif.texto = "Enorabuena! Has obtenido un BLACKJACK!\nPresiona ENTER para continuar...";
-			else notif.texto = "Has ganado!\nPresiona ENTER para continuar...";
-			DibujarNotificacion(notif);
-			break;
-		}
-		case PERDIDA:
-		{
-			notif.titulo = "PERDISTE";
-
-			if (gD.blackjackOcurred) notif.texto = "La mesa obtuvo un BLACKJACK.Has perdido.\nPresiona ENTER para continuar...";
-			else notif.texto = "Lo siento, has perdido.\nPresiona ENTER para continuar...";
-			DibujarNotificacion(notif);
-			break;
-		}
-	}
-
-	//Dibujamos los botones
-	for (int i = 0; i < menuMax; ++i)
-	{
-		botonesMenu[i].tamTexto = 40;
-		longitudTexto = MeasureText(menu[i], botonesMenu[i].tamTexto);
-		botonesMenu[i].texto = menu[i];
-		botonesMenu[i].width = longitudTexto + 20;
-		botonesMenu[i].height = botonesMenu[i].tamTexto + 20;
-
-		if (i != 0) botonesMenu[i].pos.x = botonesMenu[i - 1].pos.x + botonesMenu[i-1].width + 20;
-		else botonesMenu[i].pos.x = 720;
-
-		botonesMenu[i].pos.y = 720;
-
-		if (gD.seleccionJuego == i) botonesMenu[i].colorBoton = RED;
-
-		DibujarBoton(botonesMenu[i]);
-	}
-
 }
 
 //WIP
@@ -237,7 +191,7 @@ void RenderPausa(gameData &gD)
 	boton.height = boton.tamTexto + 20;
 	boton.pos.x = VENTANA_ANCHO / 2 - boton.width - 20;
 	boton.pos.y = VENTANA_ALTO / 2 + 10;
-	if (gD.seleccionPausa == 0) boton.colorBoton = RED;
+	if (gD.selectionPause == 0) boton.colorBoton = RED;
 	else boton.colorBoton = DARKBROWN;
 
 
@@ -248,8 +202,70 @@ void RenderPausa(gameData &gD)
 	boton.height = boton.tamTexto + 20;
 	boton.pos.x = VENTANA_ANCHO / 2 + 20;
 	boton.pos.y = VENTANA_ALTO / 2 + 10;
-	if (gD.seleccionPausa == 1) boton.colorBoton = RED;
+	if (gD.selectionPause == 1) boton.colorBoton = RED;
 	else boton.colorBoton = DARKBROWN;
 
 	DibujarBoton(boton);
+}
+
+void RenderPlayAgain(Texture2D cardTextures[], gameData &gD,carta deck[])
+{
+	Notificacion notif;
+	//Dibujamos la notificacion dependiendo del resultado del juego
+	switch (gD.gameOutcome)
+	{
+	case EMPATE:
+	{
+		notif.titulo = "EMPATE";
+
+		if (gD.blackjackOcurred) notif.texto = "Ambos han empatado con un blackjack!\nPresiona ENTER para continuar...";
+		else notif.texto = "Ha ocurrido un empate!\nPresiona ENTER para continuar...";
+		DibujarNotificacion(notif);
+		break;
+	}
+	case VICTORIA:
+	{
+		notif.titulo = "VICTORIA";
+
+		if (gD.blackjackOcurred) notif.texto = "Enorabuena! Has obtenido un BLACKJACK!\nPresiona ENTER para continuar...";
+		else notif.texto = "Has ganado!\nPresiona ENTER para continuar...";
+		DibujarNotificacion(notif);
+		break;
+	}
+	case PERDIDA:
+	{
+		notif.titulo = "PERDISTE";
+
+		if (gD.blackjackOcurred) notif.texto = "La mesa obtuvo un BLACKJACK.Has perdido.\nPresiona ENTER para continuar...";
+		else notif.texto = "Lo siento, has perdido.\nPresiona ENTER para continuar...";
+		DibujarNotificacion(notif);
+		break;
+	}
+	}
+}
+
+void RenderPickCard(Texture2D cardTextures[], gameData &gD,carta deck[])
+{
+	//Dibujamos los botones necesarios para la fase de toma de cartas
+	int longitudTexto;
+	const int menuMax = 2;
+	char* menu[menuMax] = { "Pedir", "Plantarse" };
+	Boton botonesMenu[menuMax];
+	for (int i = 0; i < menuMax; ++i)
+	{
+		botonesMenu[i].tamTexto = 40;
+		longitudTexto = MeasureText(menu[i], botonesMenu[i].tamTexto);
+		botonesMenu[i].texto = menu[i];
+		botonesMenu[i].width = longitudTexto + 20;
+		botonesMenu[i].height = botonesMenu[i].tamTexto + 20;
+
+		if (i != 0) botonesMenu[i].pos.x = botonesMenu[i - 1].pos.x + botonesMenu[i - 1].width + 20;
+		else botonesMenu[i].pos.x = 720;
+
+		botonesMenu[i].pos.y = 720;
+
+		if (gD.selectionGame == i) botonesMenu[i].colorBoton = RED;
+
+		DibujarBoton(botonesMenu[i]);
+	}
 }

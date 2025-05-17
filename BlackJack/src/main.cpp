@@ -4,7 +4,7 @@
 #include "resource_dir.h"
 #include "JuegoBJ.hpp"
 
-void ResetGame(gameData& gD, carta deck[], Pantalla& PantallaActual);
+//int main();
 
 int main()
 {
@@ -13,16 +13,7 @@ int main()
 	carta deck[52];
 
 	// Crear el mazo ----------------------------------------------------------------
-	int k(0); // Índice para el array deck.
-	for (int i = CORAZON; i <= PICA; i++) // Itera por los 4 palos.
-	{
-		for (int j = 1; j <= 13; j++) // Itera por las 13 denominaciones
-		{
-			deck[k].palo = i;
-			deck[k].denominacion = j;
-			k++;
-		}
-	}
+	CreateDeck(deck);
 
 	// Crear el contexto de OpenGL
 	InitWindow(VENTANA_ANCHO, VENTANA_ALTO, "BLACKJACK");
@@ -36,11 +27,9 @@ int main()
 
 	// Loop del juego
 	while (!gD.exitWindow) {
-		if (WindowShouldClose() || IsKeyPressed(KEY_ESCAPE)) { gD.seleccionPausa = 0;  gD.exitWindowRequested = true; };
+		if (WindowShouldClose() || IsKeyPressed(KEY_ESCAPE)) { gD.selectionPause = 0;  gD.exitWindowRequested = true; };
 
 		//Logica
-		// Inicia el dibujo
-
 		if (gD.exitWindowRequested == false)
 		{
 			switch (pantallaActual)
@@ -60,8 +49,19 @@ int main()
 				break;
 			}
 			case RESET:
-				ResetGame(gD,deck,pantallaActual);
+				CreateDeck(deck);
+				ResetGame(gD, deck, pantallaActual);
 				break;
+			case PLAY_AGAIN:
+			{
+				PlayAgain(gD, deck, pantallaActual);
+				break;
+			}
+			case PICK_CARD:
+			{
+				PickCard(gD, deck, pantallaActual);
+				break;
+			}
 			}
 		}
 		else
@@ -69,53 +69,52 @@ int main()
 			PauseGame(gD);
 		}
 
-			BeginDrawing();
-			//Renders
-			switch (pantallaActual)
-			{
-			case TITULO:
-			{
-				RenderTitulo(gD);
-				break;
-			}
-			case JUEGO:
-				RenderJuego(cardTextures, gD, deck);
-				break;
+		// Inicia el dibujo
+		BeginDrawing();
+		switch (pantallaActual)
+		{
+		case TITULO:
+		{
+			RenderTitulo(gD);
+			break;
+		}
+		case JUEGO:
+			RenderJuego(cardTextures, gD, deck);
+			break;
 
-			case REGLAS:
-				RenderReglas(gD);
-				break;
+		case REGLAS:
+			RenderReglas(gD);
+			break;
 
-			case CREDITOS:
-				RenderCreditos(gD);
-				break;
-			}
-
-			if (gD.exitWindowRequested)
-			{
-				RenderPausa(gD);
-			}
-
-			// end the frame and get ready for the next one  (display frame, poll input, etc...)
-			EndDrawing();
-
+		case CREDITOS:
+			RenderCreditos(gD);
+			break;
+		case PLAY_AGAIN:
+		{
+			RenderJuego(cardTextures, gD, deck);
+			RenderPickCard(cardTextures, gD, deck);
+			RenderPlayAgain(cardTextures, gD, deck);
+			break;
+		}
+		case PICK_CARD:
+		{
+			RenderJuego(cardTextures, gD, deck);
+			RenderPickCard(cardTextures, gD, deck);
+			break;
+		}
 		}
 
-		UnloadAllTextures(cardTextures);
+		if (gD.exitWindowRequested)
+		{
+			RenderPausa(gD);
+		}
 
-		// destroy the window and cleanup the OpenGL context
-		CloseWindow();
-		return 0;
-}
+		EndDrawing();
 
-void ResetGame(gameData& gD, carta deck[], Pantalla& PantallaActual)
-{
-	PantallaActual = JUEGO;
-	// IMPORTANTE: Reinicia el tracker y demas variables del juego, marcando todas las cartas como disponibles.
-	for (int i = 0; i < 52; ++i) {
-		deck[i].isSelected = false;
 	}
-	gD.sumPlayer = 0;
-	gD.sumCPU = 0;
-	gD.gameOutcome = SIN_DECIDIR;
+
+	UnloadAllTextures(cardTextures);
+
+	CloseWindow();
+	return 0;
 }
