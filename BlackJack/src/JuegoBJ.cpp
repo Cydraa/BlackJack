@@ -1,43 +1,40 @@
 #include "JuegoBJ.hpp"
 
-void IniciarJuego(gameData &gD, carta deck[])
+static bool gameEnd = false;
+int index_jugador(0);
+int index_CPU(0);
+bool isPlayerTurn;
+bool is_pedir = false;
+bool is_plantarse = false;
+
+void IniciarJuego(gameData &gD, carta deck[], Pantalla pantallaActual)
 {
-    bool terminateGame = false;
-    int index_jugador(0);
-    int index_CPU(0);
-    bool isPlayerTurn;
-    bool retryGame = true;
+    bool player_got_blackjack = false; // Flag: ¿Obtuvo 21 con 2 cartas?
 
-    while (terminateGame == false)
+    // --- Procesar Acción del Jugador ---
+    if (IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_RIGHT))
     {
-        srand((unsigned)time(0)); // Inicializa la semilla para números aleatorios.
+        if (gD.seleccionJuego < 1) ++gD.seleccionJuego;
+        else gD.seleccionJuego = 1;
+    }
 
-        // Crear el mazo ----------------------------------------------------------------
-        int k(0); // Índice para el array deck.
-        for (int i = CORAZON; i <= PICA; i++) // Itera por los 4 palos.
-        {
-            for (int j = 1; j <= 13; j++) // Itera por las 13 denominaciones
-            {
-                deck[k].palo = i;
-                deck[k].denominacion = j;
-                k++;
-            }
-        }
+    if (IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_LEFT))
+    {
+        if (gD.seleccionJuego > 0) --gD.seleccionJuego;
+        else gD.seleccionJuego = 0;
+    }
 
-            // IMPORTANTE: Reinicia el tracker y demas variables del juego, marcando todas las cartas como disponibles.
-            for (int i = 0; i < 52; ++i) {
-                deck[i].isSelected = false;
-            }
-            gD.sumPlayer = 0;
-            gD.sumCPU = 0;
-            gD.gameOutcome = PERDIDA;
-            bool player_got_blackjack = false; // Flag: ¿Obtuvo 21 con 2 cartas?
+    switch (gD.seleccionJuego)
+    {
+    case PEDIR: if (IsKeyPressed(KEY_ENTER)) is_pedir = true; break;
+    case PLANTARSE: if (IsKeyPressed(KEY_ENTER)) is_plantarse = true; break;
+    }
 
             // 2 Cartas para el JUGADOR
             isPlayerTurn = true;
             for (int i = 1; i <= 2; i++)
             {
-                gD.sumPlayer += card_pull(gD, deck,gD.sumPlayer, JUGADOR, index_jugador, index_CPU);
+                gD.sumPlayer += card_pull(gD, deck, gD.sumPlayer, JUGADOR, index_jugador, index_CPU);
                 gD.player_cards_count++;
             }
 
@@ -48,115 +45,91 @@ void IniciarJuego(gameData &gD, carta deck[])
 
             // 1 Carta para la MESA (CPU)
             isPlayerTurn = false;
-            gD.sumCPU += card_pull(gD, deck,gD.sumCPU, CPU, index_jugador, index_CPU);
+            gD.sumCPU += card_pull(gD, deck, gD.sumCPU, CPU, index_jugador, index_CPU);
             gD.cpu_cards_count++;
 
-            // --- TURNO DEL JUGADOR (SI NO HUBO BLACKJACK NATURAL) ---
-            if (!player_got_blackjack && gD.sumPlayer < 21) {
-                isPlayerTurn = true;
+            //// --- TURNO DEL JUGADOR (SI NO HUBO BLACKJACK NATURAL) ---
+            //if (!player_got_blackjack && gD.sumPlayer < 21) {
+            //    isPlayerTurn = true;
 
-                // Bucle para las acciones del jugador (Pedir, Plantarse)
-                bool is_pedir;
-                bool is_plantarse;
-                while (gD.sumPlayer < 21) { // Continuar mientras no se pase.
-                    // --- Procesar Acción del Jugador ---
-                    if (IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_LEFT))
-                    {
-                        if (gD.seleccion < 2) ++gD.seleccion;
-                        else gD.seleccion = 2;
-                    }
+            //    // Bucle para las acciones del jugador (Pedir, Plantarse)
+            //    while (gD.sumPlayer < 21) { // Continuar mientras no se pase.
+            //        if (is_pedir) { // ----- PEDIR (HIT) -----
+            //            gD.sumPlayer += card_pull(gD, deck, gD.sumPlayer, JUGADOR, index_jugador, index_CPU);
+            //            gD.player_cards_count++;
 
-                    if (IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_RIGHT))
-                    {
-                        if (gD.seleccion > 0) --gD.seleccion;
-                        else gD.seleccion = 0;
-                    }
+            //        }
+            //        else if (is_plantarse) { // ----- PLANTARSE (STAND) -----
+            //            break; // FIN DEL TURNO DEL JUGADOR.
+            //        }
 
-                    switch (gD.seleccion)
-                    {
-                    case PEDIR: if (IsKeyPressed(KEY_ENTER)) is_pedir = true; break;
-                    case PLANTARSE: if (IsKeyPressed(KEY_ENTER)) is_plantarse = true; break;
-                    }
+            //        // Si tras pedir, el jugador se pasa de 21, sale del bucle de acciones.
+            //        if (gD.sumPlayer >= 21) {
+            //            break;
+            //        }
+            //    } // Fin while (acciones del jugador)
+            //} // Fin if (turno del jugador)
 
+            //// --- TURNO DE LA MESA (CPU) ---
+            //bool cpu_got_natural_blackjack = false;
+            //// La mesa juega sólo si el jugador no se pasó (sumPlayer <= 21).
+            //if (gD.sumPlayer <= 21) {
+            //    isPlayerTurn = false;
 
-                    if (is_pedir) { // ----- PEDIR (HIT) -----
-                        gD.sumPlayer += card_pull(gD, deck,gD.sumPlayer, JUGADOR, index_jugador, index_CPU);
-                        gD.player_cards_count++;
+            //    // Coge/Revela la segunda carta
+            //    if (gD.cpu_cards_count == 1) {
+            //        gD.sumCPU += card_pull(gD, deck, gD.sumCPU, CPU, index_jugador, index_CPU);
+            //        gD.cpu_cards_count++;
 
-                    }
-                    else if (is_plantarse) { // ----- PLANTARSE (STAND) -----
-                        break; // FIN DEL TURNO DEL JUGADOR.
-                    }
+            //        // Comprueba si la CPU obtuvo Blackjack natural
+            //        if (gD.cpu_cards_count == 2 && gD.sumCPU == 21) {
+            //            cpu_got_natural_blackjack = true;
+            //        }
+            //    }
 
-                    // Si tras pedir, el jugador se pasa de 21, sale del bucle de acciones.
-                    if (gD.sumPlayer >= 21) {
-                        break;
-                    }
-                } // Fin while (acciones del jugador)
-            } // Fin if (turno del jugador)
+            //    // REGLA DE LA MESA: Pedir si tiene 16 o menos, plantarse con 17 o más.
+            //    while (!cpu_got_natural_blackjack && gD.sumCPU < 17 && gD.sumCPU < 21) {
+            //        gD.sumCPU += card_pull(gD, deck, gD.sumCPU, CPU, index_jugador, index_CPU);
+            //        gD.cpu_cards_count++;
+            //    }
 
-            // --- TURNO DE LA MESA (CPU) ---
-            bool cpu_got_natural_blackjack = false;
-            // La mesa juega sólo si el jugador no se pasó (sumPlayer <= 21).
-            if (gD.sumPlayer <= 21) {
-                isPlayerTurn = false;
+            //} // Fin if (Turno de la Mesa)
 
-                // Coge/Revela la segunda carta
-                if (gD.cpu_cards_count == 1) {
-                    gD.sumCPU += card_pull(gD, deck,gD.sumCPU, CPU, index_jugador, index_CPU);
-                    gD.cpu_cards_count++;
+            //// --- RESULTADOS Y PAGOS ---
+            //// Evaluar condiciones de victoria, derrota o empate
+            //if (player_got_blackjack && !cpu_got_natural_blackjack) {
+            //    gD.gameOutcome = VICTORIA;
+            //    gD.blackjackOcurred = true;
+            //}
+            //else if (player_got_blackjack && cpu_got_natural_blackjack) {
+            //    gD.gameOutcome = EMPATE;
+            //    gD.blackjackOcurred = true;
+            //}
+            //else if (cpu_got_natural_blackjack && !player_got_blackjack) {
+            //    gD.gameOutcome = PERDIDA;
+            //}
+            //else if (gD.sumPlayer > 21) {
+            //    gD.gameOutcome = PERDIDA;
+            //}
+            //else if (gD.sumCPU > 21) {
+            //    gD.gameOutcome = VICTORIA;
+            //}
+            //else if (gD.sumPlayer == gD.sumCPU) {
+            //    gD.gameOutcome = EMPATE;
+            //}
+            //else if (gD.sumPlayer > gD.sumCPU) {
+            //    gD.gameOutcome = VICTORIA;
+            //}
+            //else { // (sumCPU > sumPlayer)
+            //    gD.gameOutcome = PERDIDA;
+            //}
 
-                    // Comprueba si la CPU obtuvo Blackjack natural
-                    if (gD.cpu_cards_count == 2 && gD.sumCPU == 21) {
-                        cpu_got_natural_blackjack = true;
-                    }
-                }
-
-                // REGLA DE LA MESA: Pedir si tiene 16 o menos, plantarse con 17 o más.
-                while (!cpu_got_natural_blackjack && gD.sumCPU < 17 && gD.sumCPU < 21) {
-                    gD.sumCPU += card_pull(gD, deck,gD.sumCPU, CPU, index_jugador, index_CPU);
-                    gD.cpu_cards_count++;
-                }
-
-            } // Fin if (Turno de la Mesa)
-
-            // --- RESULTADOS Y PAGOS ---
-            // Evaluar condiciones de victoria, derrota o empate
-            if (player_got_blackjack && !cpu_got_natural_blackjack) {
-                gD.gameOutcome = VICTORIA;
-                gD.blackjackOcurred = true;
-            }
-            else if (player_got_blackjack && cpu_got_natural_blackjack) {
-                gD.gameOutcome = EMPATE;
-                gD.blackjackOcurred = true;
-            }
-            else if (cpu_got_natural_blackjack && !player_got_blackjack) {
-                gD.gameOutcome = PERDIDA;
-            }
-            else if (gD.sumPlayer > 21) {
-                gD.gameOutcome = PERDIDA;
-            }
-            else if (gD.sumCPU > 21) {
-                gD.gameOutcome = VICTORIA;
-            }
-            else if (gD.sumPlayer == gD.sumCPU) {
-                gD.gameOutcome = EMPATE;
-            }
-            else if (gD.sumPlayer > gD.sumCPU) {
-                gD.gameOutcome = VICTORIA;
-            }
-            else { // (sumCPU > sumPlayer)
-                gD.gameOutcome = PERDIDA;
-            }
-
-            if (IsKeyPressed(KEY_ENTER)) terminateGame = true;
-    }
-
-    Pantalla TITULO;
 }
 
 int card_pull(gameData &gD, carta deck[], int currentSum, int caller, int &index_jugador, int &index_CPU)
 {
+    srand((unsigned)time(0)); // Inicializa la semilla para números aleatorios.
+
     int card; // Índice de la carta seleccionada (0-51).
     int cardValue; // El valor numérico (1, 2,.. 10, 11) que la carta aporta a la suma.
 

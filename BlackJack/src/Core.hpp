@@ -12,7 +12,7 @@
 using std::string;
 using std::sprintf;
 
-typedef enum Pantalla { TITULO = -1, JUEGO, REGLAS, CREDITOS, SALIR } Pantalla;
+typedef enum Pantalla { TITULO = -1, JUEGO, REGLAS, CREDITOS, SALIR, RESET } Pantalla;
 
 struct gameData
 {
@@ -28,6 +28,7 @@ struct gameData
     int player_cards_count; // Contador de cartas del jugador para esta mano.
     int cpu_cards_count; // Contador de cartas de la CPU para esta mano.
     bool blackjackOcurred;
+    int seleccionJuego;
 
     gameData()
     {
@@ -41,6 +42,7 @@ struct gameData
         player_cards_count = 0;
         cpu_cards_count = 0;
         blackjackOcurred = false;
+        seleccionJuego = 0;
     }
 };
 

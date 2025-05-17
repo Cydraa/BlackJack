@@ -95,6 +95,7 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 	const int menuMax = 2;
 	char* menu[menuMax] = { "Pedir", "Plantarse"};
 	Boton botonesMenu[menuMax];
+	Notificacion notif;
 
 	//Titulo
 	const char* titulo = { "BLACKJACK" };
@@ -139,7 +140,6 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 	}
 
 	//Dibujamos la notificacion dependiendo del resultado del juego
-	Notificacion notif;
 	switch (gD.gameOutcome)
 	{
 		case EMPATE:
@@ -148,7 +148,7 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 			
 			if (gD.blackjackOcurred) notif.texto = "Ambos han empatado con un blackjack!\nPresiona ENTER para continuar...";
 			else notif.texto = "Ha ocurrido un empate!\nPresiona ENTER para continuar...";
-
+			DibujarNotificacion(notif);
 			break;
 		}
 		case VICTORIA:
@@ -157,7 +157,7 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 
 			if (gD.blackjackOcurred) notif.texto = "Enorabuena! Has obtenido un BLACKJACK!\nPresiona ENTER para continuar...";
 			else notif.texto = "Has ganado!\nPresiona ENTER para continuar...";
-
+			DibujarNotificacion(notif);
 			break;
 		}
 		case PERDIDA:
@@ -166,11 +166,10 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 
 			if (gD.blackjackOcurred) notif.texto = "La mesa obtuvo un BLACKJACK.Has perdido.\nPresiona ENTER para continuar...";
 			else notif.texto = "Lo siento, has perdido.\nPresiona ENTER para continuar...";
+			DibujarNotificacion(notif);
 			break;
 		}
 	}
-
-	DibujarNotificacion(notif);
 
 	//Dibujamos los botones
 	for (int i = 0; i < menuMax; ++i)
@@ -186,7 +185,7 @@ void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 
 		botonesMenu[i].pos.y = 720;
 
-		if (gD.seleccion == i) botonesMenu[i].colorBoton = RED;
+		if (gD.seleccionJuego == i) botonesMenu[i].colorBoton = RED;
 
 		DibujarBoton(botonesMenu[i]);
 	}

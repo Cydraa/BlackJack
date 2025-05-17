@@ -25,4 +25,4 @@ struct carta {
 };
 
 int card_pull(gameData& gD, carta deck[], int currentSum, int caller, int& index_jugador, int& index_CPU);
-void IniciarJuego(gameData& gD, carta deck[]);
+void IniciarJuego(gameData& gD, carta deck[], Pantalla pantallaActual);
