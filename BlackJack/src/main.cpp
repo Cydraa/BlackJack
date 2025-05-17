@@ -8,15 +8,15 @@ int main()
 {
 	Pantalla pantallaActual = TITULO;
 	gameData gD;
+	carta deck[52];
 
 	// Crear el contexto de OpenGL
 	InitWindow(VENTANA_ANCHO, VENTANA_ALTO, "BLACKJACK");
 	SearchAndSetResourceDir("resources");
 
-	Texture2D cardTextures[52];
+	//Cargamos los recursos
+	Texture2D cardTextures[53];
 	LoadAllTextures(cardTextures);
-
-	carta hand[52];
 
 	SetTargetFPS(60);
 
@@ -37,6 +37,7 @@ int main()
 					break;
 				}
 				case JUEGO:
+					IniciarJuego(gD, deck);
 					break;
 
 				case REGLAS:
@@ -63,7 +64,7 @@ int main()
 			break;
 		}
 		case JUEGO:
-			RenderJuego(cardTextures, gD, hand);
+			RenderJuego(cardTextures, gD, deck);
 			break;
 
 		case REGLAS:

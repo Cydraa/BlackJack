@@ -38,6 +38,8 @@ void LoadAllTextures(Texture2D textures[])
 			++k;
 		}
 	}
+
+	textures[52] = LoadTexture("cartas/reverso.png");
 }
 
 void UnloadAllTextures(Texture2D textures[])
@@ -46,4 +48,6 @@ void UnloadAllTextures(Texture2D textures[])
 	{
 		UnloadTexture(textures[i]);
 	}
+
+	UnloadTexture(textures[52]);
 }

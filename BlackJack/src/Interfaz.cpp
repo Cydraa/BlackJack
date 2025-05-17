@@ -86,25 +86,110 @@ void DibujarNotificacion(Notificacion notif)
 }
 
 //WIP
-void RenderJuego(Texture2D cardTextures[], gameData &gD, carta deck[])
+void RenderJuego(Texture2D cardTextures[], gameData &gD,carta deck[])
 {
 	int longitudTexto;
-	const int posXOriginal = 1000;
-	const int posYOriginal = 175;
+	const int posXDeck = 1000;
+	const int posYDeck = 175;
+	char msg[50];
+	const int menuMax = 2;
+	char* menu[menuMax] = { "Pedir", "Plantarse"};
+	Boton botonesMenu[menuMax];
 
+	//Titulo
 	const char* titulo = { "BLACKJACK" };
 	longitudTexto = MeasureText(titulo, 80);
 	DrawText(titulo, VENTANA_ANCHO / 2 - longitudTexto / 2, 40, 80, RAYWHITE);
-
 	ClearBackground(Color{0,87,43,255});
 
-	DrawText("Mesa", 100, 120, 40, RAYWHITE);
-	DrawText("Jugador", 100, 440, 40, RAYWHITE);
+	//Dibujamos el score
+	sprintf_s(msg, "Mesa: %d", gD.sumCPU);
+	DrawText(msg, 100, 120, 40, RAYWHITE);
+	sprintf_s(msg, "Jugador: %d", gD.sumPlayer);
+	DrawText(msg, 100, 440, 40, RAYWHITE);
 
-	deck[1].pos.x = 1000;
-	deck[1].pos.y = 175;
+	//Dibujamos la baraja
+	int offSetX(0);
+	for (int i = 0; i < 52-gD.player_cards_count-gD.cpu_cards_count; ++i)
+	{
+		deck[i].pos.x = posXDeck;
+		deck[i].pos.y = posYDeck;
 
-	DrawTextureEx(cardTextures[deck[1].textura],deck[1].pos,0,0.45,WHITE);
+		DrawTextureEx(cardTextures[52], deck[i].pos, 0, 0.45, WHITE);
+	}
+
+	//Dibujamos las cartas activas dependiendo de quien las haya tomado
+	int index;
+	for (int i = 0; i < gD.player_cards_count; ++i)
+	{
+		index = gD.cartasJugador[i];
+
+		if (i != 0) deck[i].pos.x = deck[i - 1].pos.x + 20;
+
+		DrawTextureEx(cardTextures[index], deck[index].pos, 0, 0.45, WHITE);
+	}
+
+	for (int i = 0; i < gD.cpu_cards_count; ++i)
+	{
+		index = gD.cartasCPU[i];
+
+		if (i != 0) deck[i].pos.x = deck[i - 1].pos.x + 20;
+
+		DrawTextureEx(cardTextures[index], deck[index].pos, 0, 0.45, WHITE);
+	}
+
+	//Dibujamos la notificacion dependiendo del resultado del juego
+	Notificacion notif;
+	switch (gD.gameOutcome)
+	{
+		case EMPATE:
+		{
+			notif.titulo = "EMPATE";
+			
+			if (gD.blackjackOcurred) notif.texto = "Ambos han empatado con un blackjack!\nPresiona ENTER para continuar...";
+			else notif.texto = "Ha ocurrido un empate!\nPresiona ENTER para continuar...";
+
+			break;
+		}
+		case VICTORIA:
+		{
+			notif.titulo = "VICTORIA";
+
+			if (gD.blackjackOcurred) notif.texto = "Enorabuena! Has obtenido un BLACKJACK!\nPresiona ENTER para continuar...";
+			else notif.texto = "Has ganado!\nPresiona ENTER para continuar...";
+
+			break;
+		}
+		case PERDIDA:
+		{
+			notif.titulo = "PERDISTE";
+
+			if (gD.blackjackOcurred) notif.texto = "La mesa obtuvo un BLACKJACK.Has perdido.\nPresiona ENTER para continuar...";
+			else notif.texto = "Lo siento, has perdido.\nPresiona ENTER para continuar...";
+			break;
+		}
+	}
+
+	DibujarNotificacion(notif);
+
+	//Dibujamos los botones
+	for (int i = 0; i < menuMax; ++i)
+	{
+		botonesMenu[i].tamTexto = 40;
+		longitudTexto = MeasureText(menu[i], botonesMenu[i].tamTexto);
+		botonesMenu[i].texto = menu[i];
+		botonesMenu[i].width = longitudTexto + 20;
+		botonesMenu[i].height = botonesMenu[i].tamTexto + 20;
+
+		if (i != 0) botonesMenu[i].pos.x = botonesMenu[i - 1].pos.x + botonesMenu[i-1].width + 20;
+		else botonesMenu[i].pos.x = 720;
+
+		botonesMenu[i].pos.y = 720;
+
+		if (gD.seleccion == i) botonesMenu[i].colorBoton = RED;
+
+		DibujarBoton(botonesMenu[i]);
+	}
 
 }
 
